@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Feb 2018 14:52:48 +0800</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2018 14:52:48 +0800</lastBuildDate>
+    <pubDate>Tue, 27 Feb 2018 14:56:43 +0800</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2018 14:56:43 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -17,6 +17,23 @@
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/uwsgi.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>工具</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
+&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/util.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
         
         
         <category>jekyll</category>
@@ -175,21 +192,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/cache.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/cache.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>nginx操作</title>
-        <description>&lt;h3 id=&quot;nginx&quot;&gt;nginx操作&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:30 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/nginx.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/nginx.html</guid>
         
         
         <category>jekyll</category>
