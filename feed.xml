@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Feb 2018 18:11:18 +0800</pubDate>
-    <lastBuildDate>Sat, 24 Feb 2018 18:11:18 +0800</lastBuildDate>
+    <pubDate>Tue, 27 Feb 2018 14:52:48 +0800</pubDate>
+    <lastBuildDate>Tue, 27 Feb 2018 14:52:48 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -32,6 +32,53 @@
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/stat.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/stat.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>python</title>
+        <description>&lt;h3 id=&quot;python-generator&quot;&gt;python generator&lt;/h3&gt;
+&lt;p&gt;通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。&lt;/p&gt;
+
+&lt;p&gt;所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器（Generator）。&lt;/p&gt;
+
+&lt;p&gt;要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;L = [x * x for x in range(10)]
+L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+g = (x * x for x in range(10))
+g
+&amp;lt;generator object &amp;lt;genexpr&amp;gt; at 0x104feab40&amp;gt;
+
+def my_gen():  
+	n = 1  
+	print(&#39;This is printed first&#39;)  
+	# Generator function contains yield statements  
+	yield n  
+
+	n += 1  
+	print(&#39;This is printed second&#39;)  
+	yield n  
+
+	n += 1  
+	print(&#39;This is printed at last&#39;)  
+	yield n  
+
+for item in my_gen():  
+	print(item) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/python.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/python.html</guid>
         
         
         <category>jekyll</category>
@@ -143,28 +190,6 @@
         <pubDate>Sat, 24 Feb 2018 15:40:30 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/nginx.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/nginx.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>ffmpeg命令</title>
-        <description>&lt;h3 id=&quot;ffmpeg&quot;&gt;ffmpeg命令&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;视频旋转&lt;/li&gt;
-  &lt;li&gt;视频宽高&lt;/li&gt;
-  &lt;li&gt;打水印&lt;/li&gt;
-  &lt;li&gt;压缩&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:30:30 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/ffmpeg.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/ffmpeg.html</guid>
         
         
         <category>jekyll</category>
