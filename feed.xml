@@ -6,8 +6,8 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Feb 2018 14:56:43 +0800</pubDate>
-    <lastBuildDate>Tue, 27 Feb 2018 14:56:43 +0800</lastBuildDate>
+    <pubDate>Wed, 28 Feb 2018 11:44:38 +0800</pubDate>
+    <lastBuildDate>Wed, 28 Feb 2018 11:44:38 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -59,7 +59,51 @@
     
       <item>
         <title>python</title>
-        <description>&lt;h3 id=&quot;python-generator&quot;&gt;python generator&lt;/h3&gt;
+        <description>&lt;h1 id=&quot;python&quot;&gt;python基础&lt;/h1&gt;
+
+&lt;h4 id=&quot;python-obj--str&quot;&gt;python 时间obj–str转换&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;datetime转str&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  now = datetime.datetime.now()
+  now_str = now.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;str转datetime&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  datetime.datetime.strptime(now_str, &quot;%Y-%m-%d %H:%M:%S&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;time转str&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  now = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;datetime转时间戳&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  t = time.mktime(now.timetuple())
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;时间戳转datetime&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  t = time.time()
+  datetime.datetime.fromtimestamp(t)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;python-generator&quot;&gt;python generator&lt;/h3&gt;
 &lt;p&gt;通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。&lt;/p&gt;
 
 &lt;p&gt;所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器（Generator）。&lt;/p&gt;
@@ -154,6 +198,29 @@ for item in my_gen():
       </item>
     
       <item>
+        <title>版本控制</title>
+        <description>&lt;h3 id=&quot;git&quot;&gt;git&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;git rm
+  当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用&lt;/li&gt;
+  &lt;li&gt;git rm –cached
+  当我们需要删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制, 可以使用&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/git.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/git.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
         <title>flask相关</title>
         <description>&lt;h3 id=&quot;flask&quot;&gt;flask相关&lt;/h3&gt;
 </description>
@@ -175,23 +242,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/django.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/django.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>cache相关</title>
-        <description>&lt;h3 id=&quot;memcache&quot;&gt;memcache&lt;/h3&gt;
-
-&lt;h3 id=&quot;redis&quot;&gt;redis&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/cache.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/cache.html</guid>
         
         
         <category>jekyll</category>

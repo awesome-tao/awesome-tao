@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>python</title>
-  <meta name="description" content="python generator通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。">
+  <meta name="description" content="python基础">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/jekyll/update/2018/02/24/python.html">
@@ -62,7 +62,51 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="python-generator">python generator</h3>
+    <h1 id="python">python基础</h1>
+
+<h4 id="python-obj--str">python 时间obj–str转换</h4>
+
+<ul>
+  <li>
+    <p>datetime转str</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  now = datetime.datetime.now()
+  now_str = now.strftime('%Y-%m-%d %H:%M:%S')
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>str转datetime</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  datetime.datetime.strptime(now_str, "%Y-%m-%d %H:%M:%S")
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>time转str</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  now = time.strftime("%Y-%m-%d %H:%M:%S")
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>datetime转时间戳</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  t = time.mktime(now.timetuple())
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>时间戳转datetime</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  t = time.time()
+  datetime.datetime.fromtimestamp(t)
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="python-generator">python generator</h3>
 <p>通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。</p>
 
 <p>所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器（Generator）。</p>
