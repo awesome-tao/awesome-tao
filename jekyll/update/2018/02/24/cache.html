@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/jekyll/update/2018/02/24/cache.html">
-  <link rel="alternate" type="application/rss+xml" title="JT's blog" href="/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="JT" href="/feed.xml">
 </head>
 
 
@@ -21,7 +21,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">JT's blog</a>
+    <a class="site-title" href="/">JT</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -64,6 +64,69 @@
   <div class="post-content" itemprop="articleBody">
     <h3 id="memcache">memcache</h3>
 
+<ul>
+  <li>
+    <p>memrm/memcat –servers=test:1234 $1</p>
+  </li>
+  <li>
+    <p>stats命令： http://yusi123.com/2833.html</p>
+  </li>
+  <li>
+    <p>性能优化:</p>
+
+    <p>http://blog.csdn.net/qq_30739519/article/details/51103398</p>
+
+    <p>http://san-yun.iteye.com/blog/1591803</p>
+
+    <p>http://blog.csdn.net/xinguan1267/article/details/7870302</p>
+
+    <p>https://www.dexcoder.com/selfly/article/2248</p>
+  </li>
+  <li>
+    <p>memcached 命令</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>(1) memcached-tool zoo:11210</td>
+          <td>memcached-tool zoo:11210 stats</td>
+          <td>memcached-tool zoo:11210 dump (导数据，不要随便用)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>(2) telnet zoo 11210</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>(3) stats</td>
+          <td>stats items</td>
+          <td>stats slabs</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>(4) echo ‘stats slabs’</td>
+          <td>nc zoo 11210</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>lsof -nP -p 31559</td>
+          <td>grep TCP -c</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
 <h3 id="redis">redis</h3>
 
   </div>
@@ -77,12 +140,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">JT's blog</h2>
+    <h2 class="footer-heading">JT</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>JT's blog</li>
+          <li>JT</li>
           <li><a href="mailto:"></a></li>
         </ul>
       </div>
