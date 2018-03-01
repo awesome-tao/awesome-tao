@@ -6,9 +6,24 @@
 </description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Feb 2018 17:58:27 +0800</pubDate>
-    <lastBuildDate>Wed, 28 Feb 2018 17:58:27 +0800</lastBuildDate>
+    <pubDate>Thu, 01 Mar 2018 17:53:03 +0800</pubDate>
+    <lastBuildDate>Thu, 01 Mar 2018 17:53:03 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>AI</title>
+        <description>&lt;h3 id=&quot;google-mlhttpsdevelopersgooglecommachine-learningcrash-course&quot;&gt;google机器学习速成课程 &lt;a href=&quot;https://developers.google.com/machine-learning/crash-course/&quot;&gt;ML&lt;/a&gt;&lt;/h3&gt;
+</description>
+        <pubDate>Thu, 01 Mar 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/03/01/ai.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/01/ai.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>uwsgi操作</title>
@@ -228,21 +243,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/git.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/git.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>flask相关</title>
-        <description>&lt;h3 id=&quot;flask&quot;&gt;flask相关&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/flask.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/flask.html</guid>
         
         
         <category>jekyll</category>
