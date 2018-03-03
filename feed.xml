@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JT</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
+    <title>Ashes</title>
+    <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 01 Mar 2018 17:53:03 +0800</pubDate>
-    <lastBuildDate>Thu, 01 Mar 2018 17:53:03 +0800</lastBuildDate>
+    <pubDate>Sat, 03 Mar 2018 10:31:02 +0800</pubDate>
+    <lastBuildDate>Sat, 03 Mar 2018 10:31:02 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -26,44 +25,22 @@
       </item>
     
       <item>
-        <title>uwsgi操作</title>
-        <description>&lt;h3 id=&quot;uwsgi&quot;&gt;uwsgi操作&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/uwsgi.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>工具</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
-&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
+        <title>思路及解法!</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;算法&lt;/h1&gt;
 
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;台阶问题, 每次可以跳A步, 也可跳B步, 跳n个台阶, 共有几种方法 ?&lt;/p&gt;
+
+    &lt;p&gt;iA + jB = n  即求 i + j&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;数据结构&lt;/h1&gt;
 </description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/util.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>统计stat</title>
-        <description>&lt;h3 id=&quot;stat&quot;&gt;统计stat&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/stat.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/stat.html</guid>
+        <pubDate>Thu, 01 Mar 2018 11:11:11 +0800</pubDate>
+        <link>/jekyll/update/2018/03/01/python-interview.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/01/python-interview.html</guid>
         
         
         <category>jekyll</category>
@@ -118,6 +95,8 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;hr /&gt;
+
 &lt;h3 id=&quot;python-generator&quot;&gt;python generator&lt;/h3&gt;
 &lt;p&gt;通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。&lt;/p&gt;
 
@@ -151,10 +130,62 @@ for item in my_gen():
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;h3 id=&quot;python-coroutine&quot;&gt;python coroutine&lt;/h3&gt;
+&lt;p&gt;python协程 一图以蔽之 &lt;img src=&quot;https://awesome-tao.github.io/images/coroutine-simple.png&quot; alt=&quot;图片&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
 </description>
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/python.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/python.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>uwsgi操作</title>
+        <description>&lt;h3 id=&quot;uwsgi&quot;&gt;uwsgi操作&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/uwsgi.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>工具</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
+&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/util.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>统计stat</title>
+        <description>&lt;h3 id=&quot;stat&quot;&gt;统计stat&lt;/h3&gt;
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/stat.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/stat.html</guid>
         
         
         <category>jekyll</category>
@@ -220,29 +251,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/goods.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/goods.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>版本控制</title>
-        <description>&lt;h3 id=&quot;git&quot;&gt;git&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;git rm
-  当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用&lt;/li&gt;
-  &lt;li&gt;git rm –cached
-  当我们需要删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制, 可以使用&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/git.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/git.html</guid>
         
         
         <category>jekyll</category>
