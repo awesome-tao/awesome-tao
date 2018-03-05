@@ -5,9 +5,65 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Mar 2018 10:31:02 +0800</pubDate>
-    <lastBuildDate>Sat, 03 Mar 2018 10:31:02 +0800</lastBuildDate>
+    <pubDate>Mon, 05 Mar 2018 17:51:46 +0800</pubDate>
+    <lastBuildDate>Mon, 05 Mar 2018 17:51:46 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>数据库设计及优化</title>
+        <description>&lt;h3 id=&quot;mysql&quot;&gt;在MySQL中构建树结构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;邻接表&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;comment_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;parent_id&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;author&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;comment&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;NULL&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;Fran&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;这个bug的成因是什么&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;递归查询&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;路径枚举&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;嵌套集 &lt;a href=&quot;https://en.wikipedia.org/wiki/Nested_set_model&quot;&gt;wiki&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;闭包表&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;管理MySQL中的分层数据 &lt;a href=&quot;http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/&quot;&gt;Managing Hierarchical Data in MySQL&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 05 Mar 2018 16:30:00 +0800</pubDate>
+        <link>/jekyll/update/2018/03/05/mysql.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/05/mysql.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>AI</title>
@@ -186,21 +242,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/stat.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/stat.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>mysql相关</title>
-        <description>&lt;h3 id=&quot;mysql&quot;&gt;mysql相关&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/mysql.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/mysql.html</guid>
         
         
         <category>jekyll</category>
