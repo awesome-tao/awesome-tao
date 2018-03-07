@@ -5,9 +5,30 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 05 Mar 2018 17:51:46 +0800</pubDate>
-    <lastBuildDate>Mon, 05 Mar 2018 17:51:46 +0800</lastBuildDate>
+    <pubDate>Wed, 07 Mar 2018 09:47:12 +0800</pubDate>
+    <lastBuildDate>Wed, 07 Mar 2018 09:47:12 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>区块链</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;区块链书籍&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/chaozh/awesome-blockchain&quot;&gt;github区块链总结&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://yeasy.gitbooks.io/blockchain_guide/&quot;&gt;区块链技术指南&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 06 Mar 2018 17:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/03/06/blockchain.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/06/blockchain.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>数据库设计及优化</title>
@@ -106,6 +127,23 @@
       </item>
     
       <item>
+        <title>algorithm</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;查找&lt;/h1&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;排序&lt;/h1&gt;
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/algorithm.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/algorithm.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
         <title>python</title>
         <description>&lt;h1 id=&quot;python&quot;&gt;python基础&lt;/h1&gt;
 
@@ -189,6 +227,17 @@ for item in my_gen():
 &lt;h3 id=&quot;python-coroutine&quot;&gt;python coroutine&lt;/h3&gt;
 &lt;p&gt;python协程 一图以蔽之 &lt;img src=&quot;https://awesome-tao.github.io/images/coroutine-simple.png&quot; alt=&quot;图片&quot; /&gt;&lt;/p&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def averager():
+    total = 0
+	count = 0
+	average = None
+	while True:
+	    in_num = yield average
+		count += 1
+		total += in_num
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;hr /&gt;
 
 </description>
@@ -259,39 +308,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/mq.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/mq.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>interview</title>
-        <description>&lt;h3 id=&quot;http-https--https-&quot;&gt;http https 区别 https 过程&lt;/h3&gt;
-
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/interview.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/interview.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>技术博客</title>
-        <description>&lt;h3 id=&quot;meituanhttpstechmeituancom&quot;&gt;美团点评 &lt;a href=&quot;https://tech.meituan.com/&quot;&gt;meituan&lt;/a&gt;&lt;/h3&gt;
-
-&lt;h3 id=&quot;allhttpblogcsdnnetmfcingarticledetails51577173&quot;&gt;互联网公司的技术博客汇总 &lt;a href=&quot;http://blog.csdn.net/mfcing/article/details/51577173&quot;&gt;all&lt;/a&gt;&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/goods.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/goods.html</guid>
         
         
         <category>jekyll</category>

@@ -144,6 +144,17 @@ for item in my_gen():
 <h3 id="python-coroutine">python coroutine</h3>
 <p>python协程 一图以蔽之 <img src="https://awesome-tao.github.io/images/coroutine-simple.png" alt="图片" /></p>
 
+<div class="highlighter-rouge"><pre class="highlight"><code>def averager():
+    total = 0
+	count = 0
+	average = None
+	while True:
+	    in_num = yield average
+		count += 1
+		total += in_num
+</code></pre>
+</div>
+
 <hr />
 
 
