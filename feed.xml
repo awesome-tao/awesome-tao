@@ -5,9 +5,62 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Mar 2018 09:47:12 +0800</pubDate>
-    <lastBuildDate>Wed, 07 Mar 2018 09:47:12 +0800</lastBuildDate>
+    <pubDate>Sat, 10 Mar 2018 18:46:52 +0800</pubDate>
+    <lastBuildDate>Sat, 10 Mar 2018 18:46:52 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>flutter</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;安装&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;git clone -b beta https://github.com/flutter/flutter.git&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;export PATH=&lt;code class=&quot;highlighter-rouge&quot;&gt;pwd&lt;/code&gt;/flutter/bin:$PATH&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;flutter doctor (检测安装依赖程序)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 10 Mar 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/03/10/flutter.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/10/flutter.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>MQ</title>
+        <description>&lt;h1 id=&quot;mqmessage-queue&quot;&gt;MQ即Message Queue&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nsq&quot;&gt;nsq&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 10 Mar 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/03/10/mq.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/10/mq.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>区块链</title>
@@ -16,6 +69,8 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/chaozh/awesome-blockchain&quot;&gt;github区块链总结&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://yeasy.gitbooks.io/blockchain_guide/&quot;&gt;区块链技术指南&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/sNoZr_tWkULURcXfF6fUaA&quot;&gt;看完此文再不懂区块链算我输，用Python从零开始创建区块链&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://bitcoin-on-nodejs.ebookchain.org/&quot;&gt;Node.js开发加密货币&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -89,6 +144,12 @@
       <item>
         <title>AI</title>
         <description>&lt;h3 id=&quot;google-mlhttpsdevelopersgooglecommachine-learningcrash-course&quot;&gt;google机器学习速成课程 &lt;a href=&quot;https://developers.google.com/machine-learning/crash-course/&quot;&gt;ML&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h1 id=&quot;tensorflow&quot;&gt;tensorflow安装&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.tensorflow.org/install/install_linux&quot;&gt;install_ubuntu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Thu, 01 Mar 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/03/01/ai.html</link>
@@ -128,9 +189,55 @@
     
       <item>
         <title>algorithm</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;查找&lt;/h1&gt;
+        <description>&lt;h2 id=&quot;section&quot;&gt;一些概念&lt;/h2&gt;
 
-&lt;h1 id=&quot;section-1&quot;&gt;排序&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;稳定度&lt;/p&gt;
+
+    &lt;p&gt;相等的两个值R和S,在原本的列表中的位置和排序后在列表中的位置没有发生变换，则是稳定的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;时间复杂度&lt;/p&gt;
+
+    &lt;p&gt;最理想 O(n), 实际比较好的 O(nlogn), 比较差的 O(n^2)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;空间复杂度&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;排序&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/5399605?fr=aladdin&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;交换排序&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;冒泡排序&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;快速排序&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;插入排序&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;希尔排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;选择排序&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;堆排序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-5&quot;&gt;合并排序&lt;/h3&gt;
+
+&lt;h2 id=&quot;section-6&quot;&gt;查找&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;二分查找&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/algorithm.html</link>
@@ -276,38 +383,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/util.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>统计stat</title>
-        <description>&lt;h3 id=&quot;stat&quot;&gt;统计stat&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/stat.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/stat.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>message queue相关</title>
-        <description>&lt;h3 id=&quot;gearman&quot;&gt;gearman&lt;/h3&gt;
-
-&lt;h3 id=&quot;nsq&quot;&gt;nsq&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/mq.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/mq.html</guid>
         
         
         <category>jekyll</category>
