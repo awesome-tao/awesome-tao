@@ -68,7 +68,76 @@
   <li>视频旋转</li>
   <li>视频宽高</li>
   <li>打水印</li>
-  <li>压缩</li>
+  <li>
+    <p>压缩</p>
+  </li>
+  <li>
+    <p>gt() 大于, gte() 大于等于, lt() 小于 and lte() 小于等于</p>
+  </li>
+  <li>ffmpeg<a href="https://www.gitbook.com/book/xdsnet/other-doc-cn-ffmpeg/details">中文文档</a></li>
+  <li>
+    <p>ffmpeg<a href="https://xdsnet.gitbooks.io/other-doc-cn-ffmpeg/content/ffmpeg-doc-cn-08.html">表达式计算/求值</a></p>
+  </li>
+  <li>
+    <p>ffmpeg 码率 帧率</p>
+
+    <ul>
+      <li>
+        <p>码率一般指比特率，比特率是指每秒传送的比特(bit)数。单位为 bps(Bit Per Second)，比特率越高，传送数据速度越快。</p>
+      </li>
+      <li>
+        <p>帧率每秒显示帧数。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>ffmpeg overlay用法 <a href="https://ffmpeg.org/ffmpeg-filters.html#Commands-15">filters中用法</a></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  overlay=x='if(gte(t,2), -w+(t-2)*20, NAN)':y=0
+
+  lte(x, y)
+  返回x&lt;=y判断式值，符合为1，否则为0
+
+  gte(x, y)
+  返回判断x&gt;=y的结果，符合则为1，否则为0
+
+  if(x, y)
+  判断x值，如果x值为非0，则返回y，否则返回0
+
+  if(x, y, z)
+  判断x值，如果x值为非0，则返回y，否则返回z.
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="python-text-img">python text-&gt;img</h3>
+
+<ul>
+  <li>
+    <p>代码</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  # 在图上写字
+  font = ImageFont.truetype("/home/arial.ttf", 47)
+  img = Image.open("/home/first-bar.png")
+  draw = ImageDraw.Draw(img)
+  draw.text((240, 0), word_name, '#ffffff', font=font)
+  # img.show()
+  ret_path = '/home/1.png'
+  img.save(ret_path)
+	
+  # 新建空白图片写字
+  font = ImageFont.truetype("/home/pingfang.ttf", 24)
+  img = Image.new("RGBA", (466, 52), (0, 0, 0, 20))
+  draw = ImageDraw.Draw(img)
+  draw_text = "test"
+  draw.text((12, 5), unicode(draw_text,'utf-8'), "#FFFFFF", font=font)
+  # img.show()
+  ret_path = '/home/2.png'
+  img.save(ret_path)
+</code></pre>
+    </div>
+  </li>
 </ul>
 
   </div>
