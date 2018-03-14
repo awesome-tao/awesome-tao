@@ -5,9 +5,156 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 13 Mar 2018 18:33:53 +0800</pubDate>
-    <lastBuildDate>Tue, 13 Mar 2018 18:33:53 +0800</lastBuildDate>
+    <pubDate>Wed, 14 Mar 2018 18:38:11 +0800</pubDate>
+    <lastBuildDate>Wed, 14 Mar 2018 18:38:11 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>ffmpeg命令</title>
+        <description>&lt;h3 id=&quot;ffmpeg&quot;&gt;ffmpeg命令&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;视频旋转&lt;/li&gt;
+  &lt;li&gt;视频宽高&lt;/li&gt;
+  &lt;li&gt;打水印&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;压缩&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;gt() 大于, gte() 大于等于, lt() 小于 and lte() 小于等于&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ffmpeg&lt;a href=&quot;https://www.gitbook.com/book/xdsnet/other-doc-cn-ffmpeg/details&quot;&gt;中文文档&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ffmpeg&lt;a href=&quot;https://xdsnet.gitbooks.io/other-doc-cn-ffmpeg/content/ffmpeg-doc-cn-08.html&quot;&gt;表达式计算/求值&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ffmpeg 码率 帧率&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;码率一般指比特率，比特率是指每秒传送的比特(bit)数。单位为 bps(Bit Per Second)，比特率越高，传送数据速度越快。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;帧率每秒显示帧数。&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ffmpeg overlay用法 &lt;a href=&quot;https://ffmpeg.org/ffmpeg-filters.html#Commands-15&quot;&gt;filters中用法&lt;/a&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  overlay=x=&#39;if(gte(t,2), -w+(t-2)*20, NAN)&#39;:y=0
+
+  lte(x, y)
+  返回x&amp;lt;=y判断式值，符合为1，否则为0
+
+  gte(x, y)
+  返回判断x&amp;gt;=y的结果，符合则为1，否则为0
+
+  if(x, y)
+  判断x值，如果x值为非0，则返回y，否则返回0
+
+  if(x, y, z)
+  判断x值，如果x值为非0，则返回y，否则返回z.
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;python-text-img&quot;&gt;python text-&amp;gt;img&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;PIL&lt;a href=&quot;http://pillow.readthedocs.io/en/latest/index.html&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;一些概念&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;RGBA是代表Red（红色） Green（绿色） Blue（蓝色）和 Alpha的色彩空间，也就是透明度/不透明度。0x80是128，大约是255的一半，A为128即为50%透明度&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  def text2line(text, font, special_padding, ch, width=466, 
+      rightpadding=12, 
+      leftpadding=12):
+      REPLACEMENT_CHARACTER = u&#39;\uFFFD&#39;
+
+      lines = []
+      line = u&quot;&quot;
+      sencond_flag = 0
+
+      if not ch:
+          text_list = text.split()
+      else:
+          text_list = text
+
+      for word in text_list:
+          if not ch:
+              word = word + &#39; &#39;
+              rightpadding = 0
+
+          if word == REPLACEMENT_CHARACTER:
+              lines.append(line)
+              sencond_flag = 1
+              line = u&quot;&quot;
+              print line, lines
+          elif sencond_flag == 0 and font.getsize(line + word)[0] &amp;lt;= 
+                  (width - rightpadding - leftpadding):
+              line += word
+              sencond_flag = 1
+          elif sencond_flag == 1 and font.getsize(line + word)[0] &amp;lt;= 
+                  (width - rightpadding - leftpadding - special_padding):
+              line += word
+          else:
+              lines.append(line)
+              line = u&quot;&quot;
+
+              line += word
+
+      if len(line) != 0:
+          lines.append(line[:])  # add the last line
+      line_height = font.getsize(text)[1] + 5
+      img_height = line_height * (len(lines))
+
+      return img_height, line_height, lines
+  ------------------------------------------------------------------
+
+  from PIL import Image, ImageDraw, ImageFont
+  # 在图上写字
+  font = ImageFont.truetype(&quot;/home/arial.ttf&quot;, 47)
+  img = Image.open(&quot;/home/first-bar.png&quot;)
+  draw = ImageDraw.Draw(img)
+  draw.text((240, 0), word_name, &#39;#ffffff&#39;, font=font)
+  # img.show()
+  ret_path = &#39;/home/1.png&#39;
+  img.save(ret_path)
+	
+  # 新建空白图片写字
+  font = ImageFont.truetype(&quot;/home/pingfang.ttf&quot;, 24)
+  img = Image.new(&quot;RGBA&quot;, (466, 52), (0, 0, 0, 20))
+  draw = ImageDraw.Draw(img)
+  draw_text = &quot;test&quot;
+  draw.text((12, 5), unicode(draw_text,&#39;utf-8&#39;), &quot;#FFFFFF&quot;, font=font)
+  # img.show()
+  ret_path = &#39;/home/2.png&#39;
+  img.save(ret_path)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 14 Mar 2018 10:30:00 +0800</pubDate>
+        <link>/jekyll/update/2018/03/14/ffmpeg.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/14/ffmpeg.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>flutter</title>
@@ -366,23 +513,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/uwsgi.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>工具</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
-&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/util.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
         
         
         <category>jekyll</category>
