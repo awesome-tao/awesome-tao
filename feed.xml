@@ -5,13 +5,33 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Mar 2018 18:38:11 +0800</pubDate>
-    <lastBuildDate>Wed, 14 Mar 2018 18:38:11 +0800</lastBuildDate>
+    <pubDate>Thu, 15 Mar 2018 18:25:50 +0800</pubDate>
+    <lastBuildDate>Thu, 15 Mar 2018 18:25:50 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>ffmpeg命令</title>
-        <description>&lt;h3 id=&quot;ffmpeg&quot;&gt;ffmpeg命令&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;mediainfo-software-mediainfohttpsmediaareanetenmediainfodownloadubuntu&quot;&gt;mediainfo software新发现 &lt;a href=&quot;https://mediaarea.net/en/MediaInfo/Download/Ubuntu&quot;&gt;MediaInfo&lt;/a&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;一些参数详解&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Codec ID: mp42 isom&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Format profile: High@L3.1 High@L4.0&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Codec settings: CABAC / 4 Ref Frames ; CABAC / 5 Ref Frames&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;ffmpeg&quot;&gt;ffmpeg命令&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;视频旋转&lt;/li&gt;
