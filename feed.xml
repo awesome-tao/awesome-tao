@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 15 Mar 2018 18:25:50 +0800</pubDate>
-    <lastBuildDate>Thu, 15 Mar 2018 18:25:50 +0800</lastBuildDate>
+    <pubDate>Sat, 17 Mar 2018 14:05:35 +0800</pubDate>
+    <lastBuildDate>Sat, 17 Mar 2018 14:05:35 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -230,6 +230,25 @@
       </item>
     
       <item>
+        <title>算法</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;算法&lt;/h1&gt;
+
+&lt;h2 id=&quot;httpswwwcnblogscomonepixelarticles7674659html&quot;&gt;排序 &lt;a href=&quot;https://www.cnblogs.com/onepixel/articles/7674659.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h2 id=&quot;httpswwwcnblogscomyw09041432p5908444html&quot;&gt;查找 &lt;a href=&quot;https://www.cnblogs.com/yw09041432/p/5908444.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
+</description>
+        <pubDate>Wed, 07 Mar 2018 10:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/03/07/algorithm.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/03/07/algorithm.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
         <title>区块链</title>
         <description>&lt;h1 id=&quot;section&quot;&gt;区块链书籍&lt;/h1&gt;
 
@@ -330,96 +349,17 @@
       </item>
     
       <item>
-        <title>思路及解法!</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;算法&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;台阶问题, 每次可以跳A步, 也可跳B步, 跳n个台阶, 共有几种方法 ?&lt;/p&gt;
-
-    &lt;p&gt;iA + jB = n  即求 i + j&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section-1&quot;&gt;数据结构&lt;/h1&gt;
-</description>
-        <pubDate>Thu, 01 Mar 2018 11:11:11 +0800</pubDate>
-        <link>/jekyll/update/2018/03/01/python-interview.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/03/01/python-interview.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>algorithm</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;一些概念&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;稳定度&lt;/p&gt;
-
-    &lt;p&gt;相等的两个值R和S,在原本的列表中的位置和排序后在列表中的位置没有发生变换，则是稳定的&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;时间复杂度&lt;/p&gt;
-
-    &lt;p&gt;最理想 O(n), 实际比较好的 O(nlogn), 比较差的 O(n^2)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;空间复杂度&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;排序&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://baike.baidu.com/item/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/5399605?fr=aladdin&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;交换排序&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;冒泡排序&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;快速排序&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;插入排序&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;希尔排序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;选择排序&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;堆排序&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-5&quot;&gt;合并排序&lt;/h3&gt;
-
-&lt;h2 id=&quot;section-6&quot;&gt;查找&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;二分查找&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/algorithm.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/algorithm.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
         <title>python</title>
         <description>&lt;h1 id=&quot;python&quot;&gt;python基础&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;py2于2019年底停止支持&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;pythonstring-unicode-byteshttpwwwcnblogscomonepixelarticles7357273html&quot;&gt;python中的string unicode bytes&lt;a href=&quot;http://www.cnblogs.com/onepixel/articles/7357273.html&quot;&gt;示例&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;unicode是字符集：为每一个「字符」分配一个唯一的 ID&lt;/li&gt;
+  &lt;li&gt;utf8是编码规则: 字节序列的规则&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h4 id=&quot;python-obj--str&quot;&gt;python 时间obj–str转换&lt;/h4&gt;
 
@@ -533,6 +473,23 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/uwsgi.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>工具</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
+&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/02/24/util.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
         
         
         <category>jekyll</category>
