@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Mar 2018 10:47:59 +0800</pubDate>
-    <lastBuildDate>Mon, 26 Mar 2018 10:47:59 +0800</lastBuildDate>
+    <pubDate>Mon, 26 Mar 2018 15:38:32 +0800</pubDate>
+    <lastBuildDate>Mon, 26 Mar 2018 15:38:32 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -231,34 +231,29 @@
     
       <item>
         <title>算法</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;算法&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;goodshttpsalgorithmyuanbinmezh-hansbasicsdatastructurelinkedlisthtml&quot;&gt;算法 &lt;a href=&quot;https://algorithm.yuanbin.me/zh-hans/basics_data_structure/linked_list.html&quot;&gt;goods&lt;/a&gt;&lt;/h1&gt;
 
 &lt;h2 id=&quot;httpswwwcnblogscomonepixelarticles7674659html&quot;&gt;排序 &lt;a href=&quot;https://www.cnblogs.com/onepixel/articles/7674659.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-1&quot;&gt;快速排序&lt;/h3&gt;
+&lt;h3 id=&quot;section&quot;&gt;快速排序&lt;/h3&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 递归
 def	qsort(L):
 	if len(L) &amp;lt; 2:
 		return L
 
 	return qsort([lt for lt in L[1:] if lt &amp;lt; L[0]]) + L[0:1] + qsort(gt for gt in L[1:] if gt &amp;gt;= L[0])
-		
-# 非递归
-def qsort(L):
-	if len(L) &amp;lt; 2:
-		return L
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
 &lt;h2 id=&quot;httpswwwcnblogscomyw09041432p5908444html&quot;&gt;查找 &lt;a href=&quot;https://www.cnblogs.com/yw09041432/p/5908444.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
 
-&lt;h3 id=&quot;section-2&quot;&gt;顺序查找&lt;/h3&gt;
+&lt;h3 id=&quot;section-1&quot;&gt;顺序查找&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;顺序查找的时间复杂度为O(n)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-3&quot;&gt;二分查找&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;二分查找&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -294,14 +289,14 @@ def qsort(L):
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-4&quot;&gt;插值查找&lt;/h3&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;插值查找&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;改进 mid = (low+high)/2 为 mid=low+1/2&lt;em&gt;(high-low) 即 mid=low+(key-a[low])/(a[high]-a[low])&lt;/em&gt;(high-low)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;section-5&quot;&gt;数据结构&lt;/h1&gt;
+&lt;h1 id=&quot;section-4&quot;&gt;数据结构&lt;/h1&gt;
 
-&lt;h3 id=&quot;section-6&quot;&gt;二叉树&lt;/h3&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;二叉树&lt;/h3&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Node():
 	def __init__(self, item):
