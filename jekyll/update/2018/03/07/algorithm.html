@@ -66,7 +66,134 @@
 
 <h2 id="httpswwwcnblogscomonepixelarticles7674659html">排序 <a href="https://www.cnblogs.com/onepixel/articles/7674659.html">示例</a></h2>
 
+<h3 id="section-1">快速排序</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code># 递归
+def	qsort(L):
+	if len(L) &lt; 2:
+		return L
+
+	return qsort([lt for lt in L[1:] if lt &lt; L[0]]) + L[0:1] + qsort(gt for gt in L[1:] if gt &gt;= L[0])
+		
+# 非递归
+def qsort(L):
+	if len(L) &lt; 2:
+		return L
+</code></pre>
+</div>
+
 <h2 id="httpswwwcnblogscomyw09041432p5908444html">查找 <a href="https://www.cnblogs.com/yw09041432/p/5908444.html">示例</a></h2>
+
+<h3 id="section-2">顺序查找</h3>
+
+<ul>
+  <li>顺序查找的时间复杂度为O(n)</li>
+</ul>
+
+<h3 id="section-3">二分查找</h3>
+
+<ul>
+  <li>
+    <p>最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2n)；</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  # 递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      mid = (low+high)//2
+      if a_list[mid] &lt; n:
+          bisect(a_list[mid+1:high], n)
+      elif a_list[mid] &gt; n:
+          bisect(a_list[low:high], n)
+      else:
+          return mid
+
+
+  # 非递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      while low &lt; high:
+          mid = (low+high)//2
+          if a_list[mid] == n:
+              return mid
+          elif a_list[mid] &lt; n:
+              low = mid + 1
+          else:
+              high = mid
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-4">插值查找</h3>
+<ul>
+  <li>改进 mid = (low+high)/2 为 mid=low+1/2<em>(high-low) 即 mid=low+(key-a[low])/(a[high]-a[low])</em>(high-low)</li>
+</ul>
+
+<h1 id="section-5">数据结构</h1>
+
+<h3 id="section-6">二叉树</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Node():
+	def __init__(self, item):
+		self.item = item
+		self.left = None
+		self.right = None
+
+class BinTree():
+	def __init__(self):
+		self.root = None
+
+	def add(self, item):
+		node = Node(item)
+		if self.root is None:
+			self.root = node
+			return
+
+		q = [self.root]
+		while True:
+			pop_node = q.pop(0)
+			if pop_node.left is None:
+				pop_node.left = node
+				return
+
+			if pop_node.right is None:
+				pop_node.right = node
+				return
+
+			q.append(pop_node.left)
+			q.append(pop_node.right)
+
+	def traverse(self):
+		if self.root is None:
+			return []
+
+		res = [self.root.item]
+		q = [self.root]
+		while q != []:
+			pop_node = q.pop(0)
+			if pop_node.left:
+				q.append(pop_node.left)
+				res.append(pop_node.left.item)
+
+			if pop_node.right:
+				q.append(pop_node.right)
+				res.append(pop_node.right.item)
+
+		return res
+
+	def preorder(self, root):
+		if root is None:
+			return []
+
+		f = [root.item]
+		m = self.preorder(root.left)
+		e = self.preorder(root.right)
+
+		return f + m + e
+</code></pre>
+</div>
+
 
   </div>
 

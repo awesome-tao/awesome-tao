@@ -5,8 +5,8 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Mar 2018 14:05:35 +0800</pubDate>
-    <lastBuildDate>Sat, 17 Mar 2018 14:05:35 +0800</lastBuildDate>
+    <pubDate>Mon, 26 Mar 2018 10:47:59 +0800</pubDate>
+    <lastBuildDate>Mon, 26 Mar 2018 10:47:59 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -235,7 +235,134 @@
 
 &lt;h2 id=&quot;httpswwwcnblogscomonepixelarticles7674659html&quot;&gt;排序 &lt;a href=&quot;https://www.cnblogs.com/onepixel/articles/7674659.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
 
+&lt;h3 id=&quot;section-1&quot;&gt;快速排序&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 递归
+def	qsort(L):
+	if len(L) &amp;lt; 2:
+		return L
+
+	return qsort([lt for lt in L[1:] if lt &amp;lt; L[0]]) + L[0:1] + qsort(gt for gt in L[1:] if gt &amp;gt;= L[0])
+		
+# 非递归
+def qsort(L):
+	if len(L) &amp;lt; 2:
+		return L
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 &lt;h2 id=&quot;httpswwwcnblogscomyw09041432p5908444html&quot;&gt;查找 &lt;a href=&quot;https://www.cnblogs.com/yw09041432/p/5908444.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;顺序查找&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;顺序查找的时间复杂度为O(n)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;二分查找&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2n)；&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # 递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      mid = (low+high)//2
+      if a_list[mid] &amp;lt; n:
+          bisect(a_list[mid+1:high], n)
+      elif a_list[mid] &amp;gt; n:
+          bisect(a_list[low:high], n)
+      else:
+          return mid
+
+
+  # 非递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      while low &amp;lt; high:
+          mid = (low+high)//2
+          if a_list[mid] == n:
+              return mid
+          elif a_list[mid] &amp;lt; n:
+              low = mid + 1
+          else:
+              high = mid
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-4&quot;&gt;插值查找&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;改进 mid = (low+high)/2 为 mid=low+1/2&lt;em&gt;(high-low) 即 mid=low+(key-a[low])/(a[high]-a[low])&lt;/em&gt;(high-low)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-5&quot;&gt;数据结构&lt;/h1&gt;
+
+&lt;h3 id=&quot;section-6&quot;&gt;二叉树&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;class Node():
+	def __init__(self, item):
+		self.item = item
+		self.left = None
+		self.right = None
+
+class BinTree():
+	def __init__(self):
+		self.root = None
+
+	def add(self, item):
+		node = Node(item)
+		if self.root is None:
+			self.root = node
+			return
+
+		q = [self.root]
+		while True:
+			pop_node = q.pop(0)
+			if pop_node.left is None:
+				pop_node.left = node
+				return
+
+			if pop_node.right is None:
+				pop_node.right = node
+				return
+
+			q.append(pop_node.left)
+			q.append(pop_node.right)
+
+	def traverse(self):
+		if self.root is None:
+			return []
+
+		res = [self.root.item]
+		q = [self.root]
+		while q != []:
+			pop_node = q.pop(0)
+			if pop_node.left:
+				q.append(pop_node.left)
+				res.append(pop_node.left.item)
+
+			if pop_node.right:
+				q.append(pop_node.right)
+				res.append(pop_node.right.item)
+
+		return res
+
+	def preorder(self, root):
+		if root is None:
+			return []
+
+		f = [root.item]
+		m = self.preorder(root.left)
+		e = self.preorder(root.right)
+
+		return f + m + e
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
 </description>
         <pubDate>Wed, 07 Mar 2018 10:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/03/07/algorithm.html</link>
