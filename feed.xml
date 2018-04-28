@@ -5,9 +5,106 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Mar 2018 15:38:32 +0800</pubDate>
-    <lastBuildDate>Mon, 26 Mar 2018 15:38:32 +0800</lastBuildDate>
+    <pubDate>Sat, 28 Apr 2018 13:55:32 +0800</pubDate>
+    <lastBuildDate>Sat, 28 Apr 2018 13:55:32 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>django</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;特点及同其他框架的比较&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;django有哪些有点&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;大而全&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;app可插拔&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;orm 写好model可直接生成表&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;django vs tornado&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;django同步 vs. tornado异步&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;使用&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;命令&lt;/p&gt;
+
+    &lt;p&gt;python manage.py migrate —&amp;gt; migrate命令会查找你所有可用的模型然后在你的数据库中创建还不存在的数据库表&lt;/p&gt;
+
+    &lt;p&gt;django-admin startproject mysite —&amp;gt; 创建一个项目&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;模板过滤器&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Mon, 23 Apr 2018 15:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/04/23/django.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/04/23/django.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>HTTP</title>
+        <description>&lt;h1 id=&quot;osiopen-system-interconnection&quot;&gt;osi(open system interconnection)七层模型:&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;从下到上依次为:&lt;/p&gt;
+
+    &lt;p&gt;物理层(物理设备,光纤) 链路层(交换机) 网络层(ip,网关,路由器) 传输层(端口,tcp udp) 会话层 表示层(编码解码,安全,压缩) 应用层(http ftp dns)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;https&quot;&gt;https原理&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;https = http + ssl/tls&lt;/p&gt;
+
+    &lt;p&gt;ssl(socket security layer)/tls(transport layer security) 传输层安全协议&lt;/p&gt;
+
+    &lt;p&gt;1.client发起请求,server返回证书及公钥
+2.client产生随机密钥(用来对称加密通信).client使用公钥对该随机数加密,然后发送给server
+3.server通过私钥对该报文解密,使用该随机数进行通信
+4.之后的通信使用对称加密&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;charles&quot;&gt;charles抓包原理&lt;/h2&gt;
+</description>
+        <pubDate>Thu, 19 Apr 2018 10:40:35 +0800</pubDate>
+        <link>/jekyll/update/2018/04/19/http.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/04/19/http.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>ffmpeg命令</title>
@@ -580,38 +677,6 @@ for item in my_gen():
         <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
         <link>/jekyll/update/2018/02/24/python.html</link>
         <guid isPermaLink="true">/jekyll/update/2018/02/24/python.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>uwsgi操作</title>
-        <description>&lt;h3 id=&quot;uwsgi&quot;&gt;uwsgi操作&lt;/h3&gt;
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/uwsgi.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/uwsgi.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>工具</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;一些好的工具&lt;/h3&gt;
-&lt;p&gt;在线工具，代码运行 &lt;a href=&quot;https://www.bytelang.com/&quot;&gt;bytelang&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 24 Feb 2018 15:40:35 +0800</pubDate>
-        <link>/jekyll/update/2018/02/24/util.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/02/24/util.html</guid>
         
         
         <category>jekyll</category>
