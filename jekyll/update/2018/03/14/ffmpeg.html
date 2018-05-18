@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>ffmpeg命令</title>
-  <meta name="description" content="mediainfo software新发现 MediaInfo">
+  <meta name="description" content="tips:">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/jekyll/update/2018/03/14/ffmpeg.html">
@@ -62,7 +62,41 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="mediainfo-software-mediainfohttpsmediaareanetenmediainfodownloadubuntu">mediainfo software新发现 <a href="https://mediaarea.net/en/MediaInfo/Download/Ubuntu">MediaInfo</a></h3>
+    <h3 id="tips">tips:</h3>
+
+<ul>
+  <li>一些比较重要的参数
+    <ul>
+      <li>r 帧率</li>
+      <li>s 裁剪尺寸</li>
+      <li>b 比特率(视频清晰度)</li>
+    </ul>
+  </li>
+  <li>
+    <p>获取media信息
+  ffprobe -show_format -show_streams xxx.video</p>
+
+    <p>-gif duration</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>exiftool -Duration gif_tmp_path</td>
+          <td>perl -lane ‘print $1 if /: ?([0-9]+.[0-9]+)/’</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>压缩</p>
+
+    <p>gif 转 mp4: ffmpeg -r 40 -i input.gif output.mp4 (-r参数是帧率,数值越大,播放越快)</p>
+
+    <p>MP4转gif: ffmpeg -i output.mp4 -r 10 1233333.gif -hide_banner (-hide_banner 可以隐藏不必要的多余讯息)</p>
+  </li>
+</ul>
+
+<h3 id="mediainfo-software-mediainfohttpsmediaareanetenmediainfodownloadubuntu">mediainfo software新发现 <a href="https://mediaarea.net/en/MediaInfo/Download/Ubuntu">MediaInfo</a></h3>
 
 <ul>
   <li>

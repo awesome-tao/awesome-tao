@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>数据库设计及优化</title>
-  <meta name="description" content="高并发分布式下的mysql问题">
+  <title>web-framework</title>
+  <meta name="description" content="django中文文档">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/jekyll/update/2018/03/05/mysql.html">
+  <link rel="canonical" href="/jekyll/update/2018/05/11/web-framework.html">
   <link rel="alternate" type="application/rss+xml" title="Ashes" href="/feed.xml">
 </head>
 
@@ -57,85 +57,87 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">数据库设计及优化</h1>
-    <p class="post-meta"><time datetime="2018-03-05T16:30:00+08:00" itemprop="datePublished">Mar 5, 2018</time></p>
+    <h1 class="post-title" itemprop="name headline">web-framework</h1>
+    <p class="post-meta"><time datetime="2018-05-11T09:00:00+08:00" itemprop="datePublished">May 11, 2018</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h2 id="mysql">高并发分布式下的mysql问题</h2>
+    <p><a href="https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html">django中文文档</a></p>
+
+<p><a href="https://docs.djangoproject.com/en/2.0/">django英文文档</a></p>
+
+<h1 id="web-frameworkwhat-is-a-web-frameworkhttpsjeffknuppcomblog20140303what-is-a-web-framework">设计一个web framework需要哪些功能或组件<a href="https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">what-is-a-web-framework</a></h1>
 
 <ul>
-  <li>
-    <p>好文<a href="https://www.cnblogs.com/shanyou/p/5048099.html?utm_source=tuicool&amp;utm_medium=referral">千万级规模高性能、高并发的网络架构经验分享</a></p>
-  </li>
-  <li>
-    <p>mysql主从延迟的解决办法</p>
+  <li>其实一个Web App，就是写一个WSGI的处理函数，针对每个HTTP请求进行响应<a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0014023080708565bc89d6ab886481fb25a16cdc3b773f0000">test</a>
+    <ul>
+      <li>URL映射</li>
+      <li>网页模板 网页缓存</li>
+      <li>request response</li>
+    </ul>
   </li>
 </ul>
 
-<h2 id="mysql-1">mysql原理</h2>
+<h1 id="cap">锁 CAP原理</h1>
+<ul>
+  <li>分布式锁	https://www.cnblogs.com/austinspark-jessylu/p/8043726.html</li>
+  <li>文件读写锁</li>
+  <li>互斥锁 乐观悲观锁</li>
+  <li>线程安全的实现方法</li>
+  <li>进程内缓存</li>
+</ul>
+
+<h1 id="section">事务</h1>
+<ul>
+  <li>分布式事务</li>
+</ul>
+
+<h2 id="tips">tips</h2>
 
 <ul>
-  <li>MySQL索引
-    <ul>
+  <li>URL拦截器</li>
+</ul>
+
+<h3 id="django">django源码分析</h3>
+
+<h3 id="section-1">特点及同其他框架的比较</h3>
+
+<ul>
+  <li>
+    <p>django有哪些有点</p>
+
+    <ol>
       <li>
-        <p>聚簇索引 非聚簇索引</p>
+        <p>大而全</p>
       </li>
-      <li>普通索引 唯一索引</li>
-      <li>单列索引 组合索引</li>
-      <li>全文索引 空间索引(MyISAM引擎才支持)</li>
-      <li>覆盖索引</li>
-    </ul>
+      <li>
+        <p>app可插拔</p>
+      </li>
+      <li>
+        <p>orm 写好model可直接生成表</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>django vs tornado</p>
+  </li>
+  <li>
+    <p>django同步 vs. tornado异步</p>
   </li>
 </ul>
 
-<h2 id="mysql-">mysql 应用</h2>
-<p>### 在MySQL中构建树结构</p>
+<h3 id="section-2">使用</h3>
 
 <ul>
   <li>
-    <p>邻接表</p>
-  </li>
-  <li>
-    <p>递归查询</p>
-  </li>
-  <li>
-    <p>路径枚举<a href="https://github.com/django-treebeard/django-treebeard">django-treebeard</a></p>
-  </li>
-  <li>
-    <p>嵌套集<a href="https://en.wikipedia.org/wiki/Nested_set_model">wiki</a></p>
+    <p>命令</p>
 
-    <p>[django-mptt]https://github.com/django-mptt/django-mptt</p>
+    <p>python manage.py migrate —&gt; migrate命令会查找你所有可用的模型然后在你的数据库中创建还不存在的数据库表</p>
+
+    <p>django-admin startproject mysite —&gt; 创建一个项目</p>
   </li>
   <li>
-    <p>闭包表</p>
-  </li>
-  <li>
-    <p>管理MySQL中的分层数据 <a href="http://mikehillyer.com/articles/managing-hierarchical-data-in-mysql/">Managing Hierarchical Data in MySQL</a></p>
-  </li>
-</ul>
-
-<h3 id="explain">explain解析</h3>
-
-<ul>
-  <li>
-    <p>select_type 表示select语句的类型</p>
-
-    <ul>
-      <li>SIMPLE 简答查询,不包括连接查询和子查询</li>
-      <li>PRIMARY 主查询或者是最外层的查询语句</li>
-      <li>UNION 连接查询</li>
-      <li>DEPENDENT UNION</li>
-      <li>UNION RESULT</li>
-      <li>SUBQUERY</li>
-      <li>DEPENDENT SUBQUERY</li>
-      <li>DERIVED</li>
-    </ul>
-  </li>
-  <li>
-    <p>type 表的连接类型</p>
-
-    <p>system const eq_ref ref ref_or_null index_merge unique_subquery index_subquery range index ALL</p>
+    <p>模板过滤器</p>
   </li>
 </ul>
 
