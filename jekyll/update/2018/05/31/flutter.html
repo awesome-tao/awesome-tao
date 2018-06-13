@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MQ</title>
-  <meta name="description" content="MQ即Message Queue">
+  <title>flutter</title>
+  <meta name="description" content="tips  文档">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/jekyll/update/2018/03/10/mq.html">
+  <link rel="canonical" href="/jekyll/update/2018/05/31/flutter.html">
   <link rel="alternate" type="application/rss+xml" title="Ashes" href="/feed.xml">
 </head>
 
@@ -63,22 +63,76 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">MQ</h1>
-    <p class="post-meta"><time datetime="2018-03-10T09:00:00+08:00" itemprop="datePublished">Mar 10, 2018</time></p>
+    <h1 class="post-title" itemprop="name headline">flutter</h1>
+    <p class="post-meta"><time datetime="2018-05-31T19:00:00+08:00" itemprop="datePublished">May 31, 2018</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="mqmessage-queue">MQ即Message Queue</h1>
-
+    <h3 id="tips">tips</h3>
 <ul>
-  <li>部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)</li>
+  <li>
+    <p><a href="https://flutterchina.club/setup-linux/">文档</a></p>
+  </li>
+  <li>
+    <p>安装</p>
+
+    <ul>
+      <li>
+        <p>git clone -b beta https://github.com/flutter/flutter.git</p>
+      </li>
+      <li>
+        <p>export PATH=<code class="highlighter-rouge">pwd</code>/flutter/bin:$PATH</p>
+      </li>
+      <li>
+        <p>flutter doctor (检测安装依赖程序)</p>
+      </li>
+    </ul>
+
+    <p>*</p>
+  </li>
 </ul>
 
-<h3 id="nsq">nsq</h3>
+<h3 id="tips-1">tips</h3>
 
 <ul>
-  <li>nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour</li>
+  <li>
+    <p>应用程序继承 StatelessWidget，这将会使应用本身也成为一个widget。 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)</p>
+  </li>
+  <li>
+    <p>Scaffold 是 Material library 中提供的一个widget, 它提供了默认的导航栏、标题和包含主屏幕widget树的body属性。widget树可以很复杂。</p>
+  </li>
+  <li>
+    <p>widget的主要工作是提供一个build()方法来描述如何根据其他较低级别的widget来显示自己。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  void main() =&gt; runApp(new MyApp());
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>实现一个 stateful widget 至少需要两个类</p>
+
+    <ol>
+      <li>
+        <p>一个 StatefulWidget类。</p>
+      </li>
+      <li>
+        <p>一个 State类。 StatefulWidget类本身是不变的，但是 State类在widget生命周期中始终存在.</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Stateless widgets 是不可变的, 这意味着它们的属性不能改变 - 所有的值都是最终的.</p>
+  </li>
+  <li>
+    <p>Stateful widgets 持有的状态可能在widget生命周期中发生变化. 实现一个 stateful widget 至少需要两个类:</p>
+
+    <ul>
+      <li>一个 StatefulWidget类。</li>
+      <li>一个 State类。 StatefulWidget类本身是不变的，但是 State类在widget生命周期中始终存在.</li>
+    </ul>
+  </li>
 </ul>
+
 
   </div>
 

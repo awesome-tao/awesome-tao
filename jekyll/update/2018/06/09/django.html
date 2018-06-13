@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MQ</title>
-  <meta name="description" content="MQ即Message Queue">
+  <title>django</title>
+  <meta name="description" content="文档 https://docs.djangoproject.com/zh-hans/2.0/">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/jekyll/update/2018/03/10/mq.html">
+  <link rel="canonical" href="/jekyll/update/2018/06/09/django.html">
   <link rel="alternate" type="application/rss+xml" title="Ashes" href="/feed.xml">
 </head>
 
@@ -60,29 +60,63 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <h1 id="httpsdocsdjangoprojectcomzh-hans20">文档 https://docs.djangoproject.com/zh-hans/2.0/</h1>
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">MQ</h1>
-    <p class="post-meta"><time datetime="2018-03-10T09:00:00+08:00" itemprop="datePublished">Mar 10, 2018</time></p>
-  </header>
-
-  <div class="post-content" itemprop="articleBody">
-    <h1 id="mqmessage-queue">MQ即Message Queue</h1>
-
+<h1 id="django">django</h1>
 <ul>
-  <li>部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)</li>
+  <li>
+    <p>python -m django –version</p>
+  </li>
+  <li>django-admin startproject mysite</li>
+  <li>python manage.py migrate</li>
+  <li>python manage.py runserver</li>
+  <li>
+    <p>python manage.py startapp polls</p>
+  </li>
+  <li>python manage.py makemigrations polls</li>
+  <li>python manage.py migrate</li>
+  <li>
+    <p>python manage.py sqlmigrate polls 0001</p>
+  </li>
+  <li>python manage.py shell</li>
+  <li>
+    <p>python manage.py createsuperuser</p>
+  </li>
+  <li>python manage.py test polls</li>
 </ul>
 
-<h3 id="nsq">nsq</h3>
-
+<h3 id="section">解释</h3>
 <ul>
-  <li>nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour</li>
+  <li>DJANGO_ROOT</li>
+  <li>PROJECT_ROOT</li>
+  <li>SITE_NAME</li>
+  <li>STATIC_ROOT</li>
+  <li>MEDIA_ROOT</li>
+  <li>STATICFILES_DIRS</li>
+  <li>
+    <p>PROJECT_TEMPLATES</p>
+  </li>
+  <li>DEFAULT_APPS</li>
+  <li>MIDDLEWARE</li>
+  <li>TEMPLATES</li>
 </ul>
 
-  </div>
+<h3 id="section-1">结构</h3>
+<ul>
+  <li>参考 http://www.loonapp.com/blog/11/</li>
+  <li>https://github.com/Mischback/django-project-skeleton</li>
+  <li>
+    <p>https://github.com/twoscoops/django-twoscoops-project</p>
+  </li>
+  <li>
+    <p>应该是django的用户信息在一个库中,这样所有app都可以共享用户名权限等信息</p>
 
-</article>
+    <p>任一app(jie,wordbook)库中只存表相关的表,django信息尽量不存(可以实现?)</p>
+  </li>
+  <li>多数据库结构
+  https://stackoverflow.com/questions/18547468/multiple-databases-and-multiple-models-in-django</li>
+</ul>
+
 
       </div>
     </div>

@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ashes</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="/page2/">
+  <link rel="alternate" type="application/rss+xml" title="Ashes" href="/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Ashes</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <!-- 遍历分页后的文章 -->
+
+  <h1><a href="/jekyll/update/2018/05/16/struct.html">基础数据结构</a></h1>
+  <p class="author">
+    <span class="date">16 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h1 id="jumphttpsalgorithmyuanbinmezh-hansbasicsdatastructurestringhtml">数据结构<a href="https://algorithm.yuanbin.me/zh-hans/basics_data_structure/string.html">jump</a></h1>
+
+<ul>
+  <li>str线程安全: 线程安全就是多线程访问时，采用了加锁机制; 线程不安全: 有可能出现多个线程先后更改数据造成所得到的数据是脏数据</li>
+</ul>
+
+<h2 id="section">可以尝试实现如下结构:</h2>
+<ul>
+  <li>heap; 优先队列; 霍夫曼压缩编码;</li>
+</ul>
+
+<h1 id="section-1">一些问题:</h1>
+<ul>
+  <li>最小生成树问题</li>
+  <li>单源最短路径</li>
+</ul>
+
+<h3 id="section-2">堆</h3>
+<ul>
+  <li>从存储结构上来说,堆是链表存储的; 从逻辑结构上来说,堆是一颗完全二叉树. 构建堆的时候即创建一个链表, 但是要满足 a[k] &lt;= a[2<em>k+1] &amp; a[k] &lt;= a[2</em>k+2]</li>
+  <li>优先队列可以使用堆结构来实现; 双端队列实现 collections.deque</li>
+</ul>
+
+<h3 id="section-3">栈</h3>
+<ul>
+  <li>collections.deque()</li>
+</ul>
+
+<h3 id="set">set</h3>
+<ul>
+  <li>
+    <p>Python的set跟dict的Implementation方式类似， 可以认为set是只有key的dict. set可进行比较</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  a = {x for x in 'abracadabra' if x not in 'abc'}
+  isinstance(a, set)
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-4">哈希表</h3>
+<ul>
+  <li>散列表,python中即dict. 哈希冲突 f(k1)==f(k2),解决办法:开发定址法和链地址法. 查找或者插入的情况在大多数情况下可以达到O(1)</li>
+</ul>
+
+<h3 id="section-5">图</h3>
+<ul>
+  <li>图的表示通常使用邻接矩阵和邻接表</li>
+  <li>邻接矩阵: 逻辑结构分为两部分：V和E集合。因此，用一个一维数组存放图中所有顶点数据；用一个二维数组存放顶点间关系（边或弧）的数据，这个二维数组称为邻接矩阵。邻接矩阵又分为有向图邻接矩阵和无向图邻接矩阵</li>
+</ul>
+
+<h3 id="section-6">链表操作</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code># 单向链表反转:
+def reverse(self, head):
+	prev = None
+	while head.next:
+		temp = head.next
+		head.next = prev
+		prev = head
+		head = temp
+
+	return prev
+
+# 链表有环
+def has_circle(self, head):
+	fast = head
+	slow = head
+	while (flast and slow):
+		fast = fast.next
+		slow = slow.next
+		if fast:
+			fast = fast.next
+		if fast == slow:
+			break
+	if fast and slow and fast == slow:
+		return true
+	else:
+		return false
+
+# 双向链表反转
+def dreverse(self, head):
+	curt = None
+	while head:
+		curt = head
+		head = curt.next
+		curt.next = curt.prev
+		curt.prev = head
+</code></pre>
+</div>
+
+<h3 id="section-7">二叉树</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>class Node():
+	def __init__(self, item):
+		self.item = item
+		self.left = None
+		self.right = None
+
+class BinTree():
+	def __init__(self):
+		self.root = None
+
+	def add(self, item):
+		node = Node(item)
+		if self.root is None:
+			self.root = node
+			return
+
+		q = [self.root]
+		while True:
+			pop_node = q.pop(0)
+			if pop_node.left is None:
+				pop_node.left = node
+				return
+
+			if pop_node.right is None:
+				pop_node.right = node
+				return
+
+			q.append(pop_node.left)
+			q.append(pop_node.right)
+
+	def traverse(self):
+		if self.root is None:
+			return []
+
+		res = [self.root.item]
+		q = [self.root]
+		while q != []:
+			pop_node = q.pop(0)
+			if pop_node.left:
+				q.append(pop_node.left)
+				res.append(pop_node.left.item)
+
+			if pop_node.right:
+				q.append(pop_node.right)
+				res.append(pop_node.right.item)
+
+		return res
+
+	def preorder(self, root):
+		if root is None:
+			return []
+
+		f = [root.item]
+		m = self.preorder(root.left)
+		e = self.preorder(root.right)
+
+		return f + m + e
+</code></pre>
+</div>
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/05/16/algorithm-middle.html">middle algorithm</a></h1>
+  <p class="author">
+    <span class="date">16 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h3 id="httpsalgorithmyuanbinmezh-hansbasicsalgorithmdivideandconquerhtml">一些算法思想 <a href="https://algorithm.yuanbin.me/zh-hans/basics_algorithm/divide_and_conquer.html">参考</a></h3>
+
+<ul>
+  <li>
+    <p>Generate nth prime number in Python</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def find_primes(limit):
+      nums = [True] * (limit + 1)
+      nums[0] = nums[1] = False
+
+      for (i, is_prime) in enumerate(nums):
+          if is_prime:
+              yield i
+              for n in range(i * i, limit + 1, i):
+                  nums[n] = False
+
+
+  def find_n_prime(n):
+      for i in range(n, (n * n) + 1, n):
+          primes = list(find_primes(i))
+          if len(primes) &gt;= n:
+              return primes[n - 1]
+
+
+  print(find_n_prime(5))
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section">问题及解决办法</h3>
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/05/16/algorithm-base.html">base algorithm</a></h1>
+  <p class="author">
+    <span class="date">16 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h1 id="section">基础算法</h1>
+
+<ul>
+  <li><a href="https://algorithm.yuanbin.me/zh-hans/basics_sorting/">goods</a></li>
+  <li><a href="http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/">other</a></li>
+  <li><a href="https://www.cnblogs.com/onepixel/articles/7674659.html">more</a></li>
+</ul>
+
+<h2 id="section-1">排序</h2>
+<ul>
+  <li>时间复杂度 空间复杂度 稳定性(如果排序后文件中拥有相同键的项的相对位置不变，这种排序方式是稳定的)</li>
+</ul>
+
+<h3 id="section-2">归并排序</h3>
+<ul>
+  <li>
+    <p>分-和, 时间复杂度O(nlogn), 空间复杂度O(n)</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def merge_sort(L):
+      if len(L) &lt; 2:
+          return L
+
+      mid = len(L) / 2
+      left_L = merge_sort(L[:mid])
+      right_L = merge_sort(L[mid:])
+      return merge_array(left_L, right_L)
+
+
+  def merge_array(left, right):
+      print(left, right)
+      new_L = []
+      l = r = 0
+      while len(left) &gt; l and len(right) &gt; r:
+          if left[l] &gt; right[r]:
+              new_L.append(left[l])
+              l += 1
+          else:
+              new_L.append(right[r])
+              r += 1
+      new_L.extend(left[l:])
+      new_L.extend(right[r:])
+      return new_L
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-3">插入排序</h3>
+<ul>
+  <li>
+    <p>时间复杂度 o(n**2), 比较麻烦的是数组的移动</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def insert_sort(L):
+      for i, item_i in enumerate(L):
+          index = i
+          while index &gt; 0 and L[index - 1] &gt; item_i:
+              L[index] = L[index - 1]
+              index -= 1
+
+          L[index] = item_i
+
+      return L
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-4">快速排序</h3>
+<ul>
+  <li>
+    <p>递归 O(nlogn)	非递归写法?</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def	qsort(L):
+      if len(L) &lt; 2:
+          return L
+
+      return qsort([lt for lt in L[1:] if lt &lt; L[0]]) + L[0:1] + qsort(gt for gt in L[1:] if gt &gt;= L[0])
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-5">堆排序</h3>
+<ul>
+  <li>
+    <p>堆排序: 大根堆,取走堆顶(实际是数组第一个元素),重新构建大顶堆,依次取走堆顶, 堆的存储结构是数组,为何还会有堆排序=&gt;是一种选择排序,比直接的选择排序快</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def heapsort(x):
+      if not x or len(x) &lt; 2:
+          return x
+      a = []
+      heapq.heapify(x)
+      while len(x):
+          top = heapq.heappop(x)
+          a.append(top)
+          heapq.heapify(x)
+
+      return a
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-6">选择排序</h3>
+<ul>
+  <li>
+    <p>时间复杂度 o(n**2) 不稳定排序</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def select_sort(L):
+      count = len(L)
+      for i in xrange(count):
+          min = i
+          for j in xrange(i+1, count):
+              if L[min] &gt; L[j]:
+                  min = j
+          L[i], L[min] = L[min], L[i]
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-7">冒泡排序</h3>
+<ul>
+  <li>
+    <p>时间复杂度 o(n*n) 稳定排序. 持续比较相邻元素,大的挪到后面,因此大的会逐步往后挪,故称之为冒泡</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def bubble_sort(L):
+      count = len(L)
+      for i in xrange(count):
+          for j in xrange(1, count - i):
+              if L[j] &lt; L[j - 1]:
+                  L[j - 1], L[j] = L[j], L[j - 1]
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h2 id="httpswwwcnblogscomyw09041432p5908444html">查找 <a href="https://www.cnblogs.com/yw09041432/p/5908444.html">示例</a></h2>
+
+<h3 id="section-8">顺序查找</h3>
+
+<ul>
+  <li>顺序查找的时间复杂度为O(n)</li>
+</ul>
+
+<h3 id="section-9">二分查找</h3>
+
+<ul>
+  <li>
+    <p>最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2n)；</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  # 递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      mid = (low+high)//2
+      if a_list[mid] &lt; n:
+          bisect(a_list[mid+1:high], n)
+      elif a_list[mid] &gt; n:
+          bisect(a_list[low:high], n)
+      else:
+          return mid
+
+
+  # 非递归
+  def bisect(a_list, n):
+      low = 0
+      high = len(a_list)
+      while low &lt; high:
+          mid = (low+high)//2
+          if a_list[mid] == n:
+              return mid
+          elif a_list[mid] &lt; n:
+              low = mid + 1
+          else:
+              high = mid
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="section-10">插值查找</h3>
+<ul>
+  <li>改进 mid = (low+high)/2 为 mid=low+1/2<em>(high-low) 即 mid=low+(key-a[low])/(a[high]-a[low])</em>(high-low)</li>
+</ul>
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/05/16/python.html">python</a></h1>
+  <p class="author">
+    <span class="date">16 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h1 id="python">python基础</h1>
+<ul>
+  <li>py2于2019年底停止支持</li>
+</ul>
+
+<h2 id="timeittimeit-">timeit.timeit 测试代码运行时间</h2>
+
+<h3 id="python-dict">python dict遍历速度最快方法是:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    for key in a_dict:iterkeys():
+        pass
+
+    for key in a_dict:
+        pass
+</code></pre>
+</div>
+
+<h3 id="python-">python 类装饰器</h3>
+
+<ul>
+  <li>
+    <p>装饰的是一个类</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  @model.entity
+  class LineItem:
+      def __init__(self):
+          pass
+
+  def entity(cls):
+      for key, attr in cls.__dict__.items():
+          if isinstance(attr, Validated):
+              type_name = type(attr).__name__
+              attr.storage_name = '_{}#{}'.format(type_name, key)
+      return cls
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="python-iter-slice-islice">python iter方法 slice类 islice方法</h3>
+<ul>
+  <li>iter返回一个迭代器</li>
+  <li>python的迭代器为什么一定要实现__iter__方法</li>
+</ul>
+
+<h3 id="python-xrange-range">python xrange range</h3>
+<ul>
+  <li>xrange() 函数用法与 range 完全相同，所不同的是生成的不是一个数组，而是一个生成器。用xrange创建一个生成器 (i for i in xrange(5))</li>
+</ul>
+
+<h3 id="python-1">python中元组的比较</h3>
+<ul>
+  <li>
+    <p>如果比较的元素是同类型的,则比较其值,返回结果。如果两个元素不是同一种类型,则检查它们是否是数字。</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  cmp((123, '123'), (123, '123', 1)) == -1
+  cmp((223, '123'), (123, '123', 1)) == 1
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="pythonstring-unicode-byteshttpwwwcnblogscomonepixelarticles7357273html">python中的string unicode bytes<a href="http://www.cnblogs.com/onepixel/articles/7357273.html">示例</a></h3>
+<ul>
+  <li>unicode是字符集：为每一个「字符」分配一个唯一的 ID</li>
+  <li>utf8是编码规则: 字节序列的规则</li>
+</ul>
+
+<h4 id="python-obj--str">python 时间obj–str转换</h4>
+
+<ul>
+  <li>
+    <p>datetime转str</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  now = datetime.datetime.now()
+  now_str = now.strftime('%Y-%m-%d %H:%M:%S')
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>str转datetime</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  datetime.datetime.strptime(now_str, "%Y-%m-%d %H:%M:%S")
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>time转str</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  now = time.strftime("%Y-%m-%d %H:%M:%S")
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>datetime转时间戳</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  t = time.mktime(now.timetuple())
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>时间戳转datetime</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  t = time.time()
+  datetime.datetime.fromtimestamp(t)
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="python-generator">python generator</h3>
+<p>通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。</p>
+
+<p>所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器（Generator）。</p>
+
+<p>要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>L = [x * x for x in range(10)]
+L
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+g = (x * x for x in range(10))
+g
+&lt;generator object &lt;genexpr&gt; at 0x104feab40&gt;
+
+def my_gen():  
+	n = 1  
+	print('This is printed first')  
+	# Generator function contains yield statements  
+	yield n  
+
+	n += 1  
+	print('This is printed second')  
+	yield n  
+
+	n += 1  
+	print('This is printed at last')  
+	yield n  
+
+for item in my_gen():  
+	print(item) 
+</code></pre>
+</div>
+
+<h3 id="python-coroutine">python coroutine</h3>
+<p>python协程 一图以蔽之 <img src="https://awesome-tao.github.io/images/coroutine-simple.png" alt="图片" /></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>def averager():
+    total = 0
+	count = 0
+	average = None
+	while True:
+	    in_num = yield average
+		count += 1
+		total += in_num
+</code></pre>
+</div>
+
+<hr />
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/05/11/util.html">工具</a></h1>
+  <p class="author">
+    <span class="date">11 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h3 id="elasticsearch">elasticsearch</h3>
+
+<ul>
+  <li>
+    <p>原理</p>
+
+    <p>时间序列数据库的秘密(2)——索引<a href="http://www.infoq.com/cn/articles/database-timestamp-02?utm_source=infoq&amp;utm_medium=related_content_link&amp;utm_campaign=relatedContent_articles_clk"></a>
+  (http://www.infoq.com/cn/articles/database-timestamp-01)</p>
+  </li>
+</ul>
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/05/11/web-framework.html">web-framework</a></h1>
+  <p class="author">
+    <span class="date">11 May 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h1 id="cap">CAP原理</h1>
+
+<ul>
+  <li>异地多活(难度最高?)</li>
+  <li>60P数据</li>
+  <li>康威定律 (架构之美) http://36kr.com/p/5042735.html</li>
+  <li>growth team</li>
+  <li>持续交付</li>
+  <li>大型分布式电商系统架构是如何从 0 开始演进的？ https://mp.weixin.qq.com/s/bQ6b5cq-n6dmI8vkJvugBg</li>
+  <li>独家揭秘网易严选的交易架构演变思路 https://mp.weixin.qq.com/s/xjkH_4gXqdH9tIruxXHZNA</li>
+  <li>免费开源安全工具: Nessus, Snort, Nagios, Ettercap, Infection Monkey, Delta, Cuckoo sandbox, Sleuth Kit, Lynis, Certbot https://www.cnbeta.com/articles/soft/735665.htm</li>
+</ul>
+
+<h1 id="esb--soa--restful--">ESB &amp; SOA &amp; Restful &amp; 微服务</h1>
+
+<ul>
+  <li>
+    <p>高并发 复杂系统扩容:</p>
+
+    <p>(1) 水平复制,即在负载均衡服务器后增加多个web服务器
+  (2) 纵向扩展,对数据库的扩展,即分库分表
+  (3) 功能分解,将不同职能的模块分成不同的服务</p>
+  </li>
+  <li>
+    <p><a href="http://nameko.readthedocs.io/en/stable/">微服务</a></p>
+  </li>
+</ul>
+
+<p><a href="https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html">django中文文档</a></p>
+
+<p><a href="https://docs.djangoproject.com/en/2.0/">django英文文档</a></p>
+
+<h1 id="web-frameworkwhat-is-a-web-frameworkhttpsjeffknuppcomblog20140303what-is-a-web-framework">设计一个web framework需要哪些功能或组件<a href="https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/">what-is-a-web-framework</a></h1>
+
+<ul>
+  <li>其实一个Web App，就是写一个WSGI的处理函数，针对每个HTTP请求进行响应<a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0014023080708565bc89d6ab886481fb25a16cdc3b773f0000">test</a>
+    <ul>
+      <li>URL映射</li>
+      <li>网页模板 网页缓存</li>
+      <li>request response</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="section">锁</h1>
+<ul>
+  <li>分布式锁	https://www.cnblogs.com/austinspark-jessylu/p/8043726.html</li>
+  <li>文件读写锁</li>
+  <li>互斥锁 乐观悲观锁</li>
+  <li>线程安全的实现方法</li>
+  <li>进程内缓存</li>
+</ul>
+
+<h1 id="section-1">事务</h1>
+<ul>
+  <li>分布式事务</li>
+</ul>
+
+<h2 id="tips">tips</h2>
+
+<ul>
+  <li>URL拦截器</li>
+</ul>
+
+<h3 id="django">django源码分析</h3>
+
+<h3 id="section-2">特点及同其他框架的比较</h3>
+
+<ul>
+  <li>
+    <p>django有哪些有点</p>
+
+    <ol>
+      <li>
+        <p>大而全</p>
+      </li>
+      <li>
+        <p>app可插拔</p>
+      </li>
+      <li>
+        <p>orm 写好model可直接生成表</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>django vs tornado</p>
+  </li>
+  <li>
+    <p>django同步 vs. tornado异步</p>
+  </li>
+</ul>
+
+<h3 id="section-3">使用</h3>
+
+<ul>
+  <li>
+    <p>命令</p>
+
+    <p>python manage.py migrate —&gt; migrate命令会查找你所有可用的模型然后在你的数据库中创建还不存在的数据库表</p>
+
+    <p>django-admin startproject mysite —&gt; 创建一个项目</p>
+  </li>
+  <li>
+    <p>模板过滤器</p>
+  </li>
+</ul>
+
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/03/14/ffmpeg.html">ffmpeg命令</a></h1>
+  <p class="author">
+    <span class="date">14 Mar 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h3 id="tips">tips:</h3>
+
+<ul>
+  <li>一些比较重要的参数
+    <ul>
+      <li>r 帧率</li>
+      <li>s 裁剪尺寸</li>
+      <li>b 比特率(视频清晰度)</li>
+    </ul>
+  </li>
+  <li>
+    <p>获取media信息
+  ffprobe -show_format -show_streams xxx.video</p>
+
+    <p>-gif duration</p>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>exiftool -Duration gif_tmp_path</td>
+          <td>perl -lane ‘print $1 if /: ?([0-9]+.[0-9]+)/’</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>压缩</p>
+
+    <p>gif 转 mp4: ffmpeg -r 40 -i input.gif output.mp4 (-r参数是帧率,数值越大,播放越快)</p>
+
+    <p>MP4转gif: ffmpeg -i output.mp4 -r 10 1233333.gif -hide_banner (-hide_banner 可以隐藏不必要的多余讯息)</p>
+
+    <p>“height not divisible by 2” error —&gt; -vf scale=1280:-1   -1 表示按输入尺寸等比自动计算</p>
+  </li>
+</ul>
+
+<h3 id="mediainfo-software-mediainfohttpsmediaareanetenmediainfodownloadubuntu">mediainfo software新发现 <a href="https://mediaarea.net/en/MediaInfo/Download/Ubuntu">MediaInfo</a></h3>
+
+<ul>
+  <li>
+    <p>一些参数详解</p>
+
+    <ul>
+      <li>
+        <p>Codec ID: mp42 isom</p>
+      </li>
+      <li>
+        <p>Format profile: High@L3.1 High@L4.0</p>
+      </li>
+      <li>
+        <p>Codec settings: CABAC / 4 Ref Frames ; CABAC / 5 Ref Frames</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="ffmpeg">ffmpeg命令</h3>
+
+<ul>
+  <li>视频旋转</li>
+  <li>视频宽高</li>
+  <li>打水印</li>
+  <li>
+    <p>压缩</p>
+  </li>
+  <li>
+    <p>gt() 大于, gte() 大于等于, lt() 小于 and lte() 小于等于</p>
+  </li>
+  <li>ffmpeg<a href="https://www.gitbook.com/book/xdsnet/other-doc-cn-ffmpeg/details">中文文档</a></li>
+  <li>
+    <p>ffmpeg<a href="https://xdsnet.gitbooks.io/other-doc-cn-ffmpeg/content/ffmpeg-doc-cn-08.html">表达式计算/求值</a></p>
+  </li>
+  <li>
+    <p>ffmpeg 码率 帧率</p>
+
+    <ul>
+      <li>
+        <p>码率一般指比特率，比特率是指每秒传送的比特(bit)数。单位为 bps(Bit Per Second)，比特率越高，传送数据速度越快。</p>
+      </li>
+      <li>
+        <p>帧率每秒显示帧数。</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>ffmpeg overlay用法 <a href="https://ffmpeg.org/ffmpeg-filters.html#Commands-15">filters中用法</a></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  overlay=x='if(gte(t,2), -w+(t-2)*20, NAN)':y=0
+
+  lte(x, y)
+  返回x&lt;=y判断式值，符合为1，否则为0
+
+  gte(x, y)
+  返回判断x&gt;=y的结果，符合则为1，否则为0
+
+  if(x, y)
+  判断x值，如果x值为非0，则返回y，否则返回0
+
+  if(x, y, z)
+  判断x值，如果x值为非0，则返回y，否则返回z.
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h3 id="python-text-img">python text-&gt;img</h3>
+
+<ul>
+  <li>
+    <p>PIL<a href="http://pillow.readthedocs.io/en/latest/index.html">文档</a></p>
+  </li>
+  <li>
+    <p>一些概念</p>
+
+    <ul>
+      <li>RGBA是代表Red（红色） Green（绿色） Blue（蓝色）和 Alpha的色彩空间，也就是透明度/不透明度。0x80是128，大约是255的一半，A为128即为50%透明度</li>
+    </ul>
+  </li>
+  <li>
+    <p>代码</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def text2line(text, font, special_padding, ch, width=466, 
+      rightpadding=12, 
+      leftpadding=12):
+      REPLACEMENT_CHARACTER = u'\uFFFD'
+
+      lines = []
+      line = u""
+      sencond_flag = 0
+
+      if not ch:
+          text_list = text.split()
+      else:
+          text_list = text
+
+      for word in text_list:
+          if not ch:
+              word = word + ' '
+              rightpadding = 0
+
+          if word == REPLACEMENT_CHARACTER:
+              lines.append(line)
+              sencond_flag = 1
+              line = u""
+              print line, lines
+          elif sencond_flag == 0 and font.getsize(line + word)[0] &lt;= 
+                  (width - rightpadding - leftpadding):
+              line += word
+              sencond_flag = 1
+          elif sencond_flag == 1 and font.getsize(line + word)[0] &lt;= 
+                  (width - rightpadding - leftpadding - special_padding):
+              line += word
+          else:
+              lines.append(line)
+              line = u""
+
+              line += word
+
+      if len(line) != 0:
+          lines.append(line[:])  # add the last line
+      line_height = font.getsize(text)[1] + 5
+      img_height = line_height * (len(lines))
+
+      return img_height, line_height, lines
+  ------------------------------------------------------------------
+
+  from PIL import Image, ImageDraw, ImageFont
+  # 在图上写字
+  font = ImageFont.truetype("/home/arial.ttf", 47)
+  img = Image.open("/home/first-bar.png")
+  draw = ImageDraw.Draw(img)
+  draw.text((240, 0), word_name, '#ffffff', font=font)
+  # img.show()
+  ret_path = '/home/1.png'
+  img.save(ret_path)
+	
+  # 新建空白图片写字
+  font = ImageFont.truetype("/home/pingfang.ttf", 24)
+  img = Image.new("RGBA", (466, 52), (0, 0, 0, 20))
+  draw = ImageDraw.Draw(img)
+  draw_text = "test"
+  draw.text((12, 5), unicode(draw_text,'utf-8'), "#FFFFFF", font=font)
+  # img.show()
+  ret_path = '/home/2.png'
+  img.save(ret_path)
+</code></pre>
+    </div>
+  </li>
+</ul>
+-->
+  <!--</div>-->
+
+  <h1><a href="/jekyll/update/2018/03/10/mq.html">MQ</a></h1>
+  <p class="author">
+    <span class="date">10 Mar 2018</span>
+  </p>
+  <!--<div class="content">-->
+    <!--<h1 id="mqmessage-queue">MQ即Message Queue</h1>
+
+<ul>
+  <li>部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)</li>
+</ul>
+
+<h3 id="nsq">nsq</h3>
+
+<ul>
+  <li>nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour</li>
+</ul>
+-->
+  <!--</div>-->
+
+
+<!-- 分页链接 -->
+<div class="pagination">
+  
+    <a href="/page1" class="previous">Previous</a>
+  
+  <span class="page_number ">Page: 2 of 4</span>
+  
+    <a href="/page3" class="next">Next</a>
+  
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ashes</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Ashes</li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p></p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

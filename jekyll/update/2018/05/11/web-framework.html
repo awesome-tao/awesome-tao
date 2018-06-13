@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>web-framework</title>
-  <meta name="description" content="django中文文档">
+  <meta name="description" content="CAP原理">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="/jekyll/update/2018/05/11/web-framework.html">
@@ -44,6 +44,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       </div>
     </nav>
 
@@ -62,7 +68,35 @@
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <p><a href="https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html">django中文文档</a></p>
+    <h1 id="cap">CAP原理</h1>
+
+<ul>
+  <li>异地多活(难度最高?)</li>
+  <li>60P数据</li>
+  <li>康威定律 (架构之美) http://36kr.com/p/5042735.html</li>
+  <li>growth team</li>
+  <li>持续交付</li>
+  <li>大型分布式电商系统架构是如何从 0 开始演进的？ https://mp.weixin.qq.com/s/bQ6b5cq-n6dmI8vkJvugBg</li>
+  <li>独家揭秘网易严选的交易架构演变思路 https://mp.weixin.qq.com/s/xjkH_4gXqdH9tIruxXHZNA</li>
+  <li>免费开源安全工具: Nessus, Snort, Nagios, Ettercap, Infection Monkey, Delta, Cuckoo sandbox, Sleuth Kit, Lynis, Certbot https://www.cnbeta.com/articles/soft/735665.htm</li>
+</ul>
+
+<h1 id="esb--soa--restful--">ESB &amp; SOA &amp; Restful &amp; 微服务</h1>
+
+<ul>
+  <li>
+    <p>高并发 复杂系统扩容:</p>
+
+    <p>(1) 水平复制,即在负载均衡服务器后增加多个web服务器
+  (2) 纵向扩展,对数据库的扩展,即分库分表
+  (3) 功能分解,将不同职能的模块分成不同的服务</p>
+  </li>
+  <li>
+    <p><a href="http://nameko.readthedocs.io/en/stable/">微服务</a></p>
+  </li>
+</ul>
+
+<p><a href="https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html">django中文文档</a></p>
 
 <p><a href="https://docs.djangoproject.com/en/2.0/">django英文文档</a></p>
 
@@ -78,7 +112,7 @@
   </li>
 </ul>
 
-<h1 id="cap">锁 CAP原理</h1>
+<h1 id="section">锁</h1>
 <ul>
   <li>分布式锁	https://www.cnblogs.com/austinspark-jessylu/p/8043726.html</li>
   <li>文件读写锁</li>
@@ -87,7 +121,7 @@
   <li>进程内缓存</li>
 </ul>
 
-<h1 id="section">事务</h1>
+<h1 id="section-1">事务</h1>
 <ul>
   <li>分布式事务</li>
 </ul>
@@ -100,7 +134,7 @@
 
 <h3 id="django">django源码分析</h3>
 
-<h3 id="section-1">特点及同其他框架的比较</h3>
+<h3 id="section-2">特点及同其他框架的比较</h3>
 
 <ul>
   <li>
@@ -126,7 +160,7 @@
   </li>
 </ul>
 
-<h3 id="section-2">使用</h3>
+<h3 id="section-3">使用</h3>
 
 <ul>
   <li>

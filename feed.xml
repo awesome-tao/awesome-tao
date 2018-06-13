@@ -5,9 +5,326 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 18 May 2018 19:01:56 +0800</pubDate>
-    <lastBuildDate>Fri, 18 May 2018 19:01:56 +0800</lastBuildDate>
+    <pubDate>Wed, 13 Jun 2018 09:44:12 +0800</pubDate>
+    <lastBuildDate>Wed, 13 Jun 2018 09:44:12 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>django</title>
+        <description>&lt;h1 id=&quot;httpsdocsdjangoprojectcomzh-hans20&quot;&gt;文档 https://docs.djangoproject.com/zh-hans/2.0/&lt;/h1&gt;
+
+&lt;h1 id=&quot;django&quot;&gt;django&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;python -m django –version&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;django-admin startproject mysite&lt;/li&gt;
+  &lt;li&gt;python manage.py migrate&lt;/li&gt;
+  &lt;li&gt;python manage.py runserver&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;python manage.py startapp polls&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;python manage.py makemigrations polls&lt;/li&gt;
+  &lt;li&gt;python manage.py migrate&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;python manage.py sqlmigrate polls 0001&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;python manage.py shell&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;python manage.py createsuperuser&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;python manage.py test polls&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;解释&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;DJANGO_ROOT&lt;/li&gt;
+  &lt;li&gt;PROJECT_ROOT&lt;/li&gt;
+  &lt;li&gt;SITE_NAME&lt;/li&gt;
+  &lt;li&gt;STATIC_ROOT&lt;/li&gt;
+  &lt;li&gt;MEDIA_ROOT&lt;/li&gt;
+  &lt;li&gt;STATICFILES_DIRS&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PROJECT_TEMPLATES&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;DEFAULT_APPS&lt;/li&gt;
+  &lt;li&gt;MIDDLEWARE&lt;/li&gt;
+  &lt;li&gt;TEMPLATES&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;参考 http://www.loonapp.com/blog/11/&lt;/li&gt;
+  &lt;li&gt;https://github.com/Mischback/django-project-skeleton&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;https://github.com/twoscoops/django-twoscoops-project&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;应该是django的用户信息在一个库中,这样所有app都可以共享用户名权限等信息&lt;/p&gt;
+
+    &lt;p&gt;任一app(jie,wordbook)库中只存表相关的表,django信息尽量不存(可以实现?)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;多数据库结构
+  https://stackoverflow.com/questions/18547468/multiple-databases-and-multiple-models-in-django&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 09 Jun 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/06/09/django.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/06/09/django.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>flutter</title>
+        <description>&lt;h3 id=&quot;tips&quot;&gt;tips&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://flutterchina.club/setup-linux/&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;git clone -b beta https://github.com/flutter/flutter.git&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;export PATH=&lt;code class=&quot;highlighter-rouge&quot;&gt;pwd&lt;/code&gt;/flutter/bin:$PATH&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;flutter doctor (检测安装依赖程序)&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;*&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tips-1&quot;&gt;tips&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;应用程序继承 StatelessWidget，这将会使应用本身也成为一个widget。 在Flutter中，大多数东西都是widget，包括对齐(alignment)、填充(padding)和布局(layout)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Scaffold 是 Material library 中提供的一个widget, 它提供了默认的导航栏、标题和包含主屏幕widget树的body属性。widget树可以很复杂。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;widget的主要工作是提供一个build()方法来描述如何根据其他较低级别的widget来显示自己。&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  void main() =&amp;gt; runApp(new MyApp());
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;实现一个 stateful widget 至少需要两个类&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;一个 StatefulWidget类。&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;一个 State类。 StatefulWidget类本身是不变的，但是 State类在widget生命周期中始终存在.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stateless widgets 是不可变的, 这意味着它们的属性不能改变 - 所有的值都是最终的.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stateful widgets 持有的状态可能在widget生命周期中发生变化. 实现一个 stateful widget 至少需要两个类:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;一个 StatefulWidget类。&lt;/li&gt;
+      &lt;li&gt;一个 State类。 StatefulWidget类本身是不变的，但是 State类在widget生命周期中始终存在.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 31 May 2018 19:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/05/31/flutter.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/31/flutter.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>linux</title>
+        <description>&lt;h1 id=&quot;htpasswd&quot;&gt;htpasswd&lt;/h1&gt;
+</description>
+        <pubDate>Thu, 31 May 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/05/31/linux.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/31/linux.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>elasticsearch</title>
+        <description>&lt;h1 id=&quot;elasticsearch&quot;&gt;elasticsearch&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;detail &lt;a href=&quot;https://www.elastic.co/guide/cn/elasticsearch/guide/current/_tutorial_conclusion.html&quot;&gt;文档&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;python &lt;a href=&quot;https://elasticsearch-py.readthedocs.io/en/master/api.html&quot;&gt;api&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;inverted-index&quot;&gt;倒排索引 Inverted index&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;一个未经处理的数据库中，一般是以文档ID作为索引，以文档内容作为记录。 而Inverted index 指的是将单词或记录作为索引，将文档ID作为记录，这样便可以方便地通过单词或记录查找到其所在的文档&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;relational-db---databases---tables---rows---columns&quot;&gt;Relational DB -&amp;gt; Databases -&amp;gt; Tables -&amp;gt; Rows -&amp;gt; Columns&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;关系型数据库       数据库             表              行                列
+Elasticsearch -&amp;gt; Indices   -&amp;gt; Types  -&amp;gt; Documents -&amp;gt; Fields
+Elasticsearch      索引               类型        文档                 域（字段）
+
+es没有事务
+没有授权认证
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;操作tips&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;删除所有索引&lt;/p&gt;
+
+    &lt;p&gt;curl -XDELETE http://localhost:9200/_all&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;一次删除多个索引&lt;/p&gt;
+
+    &lt;p&gt;curl -XDELETE http://localhost:9200/index_a,index_b&lt;/p&gt;
+
+    &lt;p&gt;为了安全起见，可以在配置文件中设置禁用_all和*通配符&lt;/p&gt;
+
+    &lt;p&gt;action.destructive_requires_name = true&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;参考 https://blog.csdn.net/YHYR_YCY/article/details/78882011&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 31 May 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/05/31/elasticsearch.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/31/elasticsearch.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>高并发的一些问题</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;高并发抽奖&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;考虑在抽奖之前先用随机算法生成一批中奖候选人. 然后当用户请求过来时如果其中绝大多数请求都非中奖候选人，则直接返回抽奖失败，不走抽奖拿奖品的流程。少部分用户请求是中奖候选人，则进入队列，排在队列前面的获得奖品，发完为止，先到先得&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Sat, 19 May 2018 15:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/05/19/high-concurrency.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/19/high-concurrency.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>re正则表达式</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;贪婪 非贪婪模式&lt;/h2&gt;
+
+&lt;h2 id=&quot;python-re&quot;&gt;python re模块&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 查找汉字 re.findall(ur&#39;[\u4e00-\u9fa5]+&#39;, word.decode(&#39;utf8&#39;))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.search(pattern, string, flags=0)&lt;/p&gt;
+
+    &lt;p&gt;返回 match object 或者 None, match object可使用group()&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.match(pattern, string, flags=0)&lt;/p&gt;
+
+    &lt;p&gt;只有在0位置匹配成功的话才有返回, 返回match object 或者 None&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.fullmatch(pattern, string, flags=0)&lt;/p&gt;
+
+    &lt;p&gt;py3才有&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.split(pattern, string, maxsplit=0, flags=0)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.findall(pattern, string, flags=0)&lt;/p&gt;
+
+    &lt;p&gt;返回数组&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.finditer(pattern, string, flags=0)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.sub(pattern, repl, string, count=0, flags=0)&lt;/p&gt;
+
+    &lt;p&gt;正则的替换&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.subn(pattern, repl, string, count=0, flags=0)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;re.escape(pattern)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;常用正则&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;ip:port的匹配&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;手机号匹配 &lt;a href=&quot;https://github.com/VincentSit/ChinaMobilePhoneNumberRegex&quot;&gt;参考&lt;/a&gt;&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  pattern = (r&quot;^(?=\d{11}$)^1(?:3\d|4[57]|5[^4\D]|66|7[^249\D]|8\d|9[89])\d{8}$&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 19 May 2018 09:00:00 +0800</pubDate>
+        <link>/jekyll/update/2018/05/19/re.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/19/re.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
     
       <item>
         <title>HTTP</title>
@@ -42,12 +359,14 @@
   &lt;/li&gt;
   &lt;li&gt;
     &lt;ol&gt;
-      &lt;li&gt;&lt;/li&gt;
+      &lt;li&gt;X-Forwarded-For ???&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;get-post-head-put-delete-options-trace&quot;&gt;get post head put delete options trace&lt;/h1&gt;
+&lt;h3 id=&quot;dns-over-tls&quot;&gt;dns(应用层) over tls(安全传输层协议)&lt;/h3&gt;
+
+&lt;h3 id=&quot;get-post-head-put-delete-options-trace&quot;&gt;get post head put delete options trace&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -75,78 +394,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;httphttpsblogcsdnnethuwei2003articledetails70139062&quot;&gt;http状态码&lt;a href=&quot;https://blog.csdn.net/huwei2003/article/details/70139062&quot;&gt;详解&lt;/a&gt;&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;304 未修改: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  REASON_PHRASES = {
-      100: &#39;CONTINUE&#39;,
-      101: &#39;SWITCHING PROTOCOLS&#39;,
-      102: &#39;PROCESSING&#39;,
-      200: &#39;OK&#39;,                                      # 请求没问题,实体的主体部分包含了所请求的资源
-      201: &#39;CREATED&#39;,
-      202: &#39;ACCEPTED&#39;,
-      203: &#39;NON-AUTHORITATIVE INFORMATION&#39;,
-      204: &#39;NO CONTENT&#39;,
-      205: &#39;RESET CONTENT&#39;,
-      206: &#39;PARTIAL CONTENT&#39;,
-      207: &#39;MULTI-STATUS&#39;,
-      208: &#39;ALREADY REPORTED&#39;,
-      226: &#39;IM USED&#39;,
-      300: &#39;MULTIPLE CHOICES&#39;,
-      301: &#39;MOVED PERMANENTLY&#39;,                       # 永久重定向
-      302: &#39;FOUND&#39;,
-      303: &#39;SEE OTHER&#39;,
-      304: &#39;NOT MODIFIED&#39;,                            # 客户端get请求,而最近资源未被修改,可用来说明资源未被修改.响应不应该包含实体的主体部分
-      305: &#39;USE PROXY&#39;,
-      306: &#39;RESERVED&#39;,
-      307: &#39;TEMPORARY REDIRECT&#39;,
-      308: &#39;PERMANENT REDIRECT&#39;,
-      400: &#39;BAD REQUEST&#39;,
-      401: &#39;UNAUTHORIZED&#39;,
-      402: &#39;PAYMENT REQUIRED&#39;,
-      403: &#39;FORBIDDEN&#39;,
-      404: &#39;NOT FOUND&#39;,
-      405: &#39;METHOD NOT ALLOWED&#39;,
-      406: &#39;NOT ACCEPTABLE&#39;,
-      407: &#39;PROXY AUTHENTICATION REQUIRED&#39;,
-      408: &#39;REQUEST TIMEOUT&#39;,
-      409: &#39;CONFLICT&#39;,
-      410: &#39;GONE&#39;,
-      411: &#39;LENGTH REQUIRED&#39;,
-      412: &#39;PRECONDITION FAILED&#39;,
-      413: &#39;REQUEST ENTITY TOO LARGE&#39;,
-      414: &#39;REQUEST-URI TOO LONG&#39;,
-      415: &#39;UNSUPPORTED MEDIA TYPE&#39;,
-      416: &#39;REQUESTED RANGE NOT SATISFIABLE&#39;,
-      417: &#39;EXPECTATION FAILED&#39;,
-      418: &quot;I&#39;M A TEAPOT&quot;,
-      422: &#39;UNPROCESSABLE ENTITY&#39;,
-      423: &#39;LOCKED&#39;,
-      424: &#39;FAILED DEPENDENCY&#39;,
-      426: &#39;UPGRADE REQUIRED&#39;,
-      428: &#39;PRECONDITION REQUIRED&#39;,
-      429: &#39;TOO MANY REQUESTS&#39;,
-      431: &#39;REQUEST HEADER FIELDS TOO LARGE&#39;,
-      500: &#39;INTERNAL SERVER ERROR&#39;,
-      501: &#39;NOT IMPLEMENTED&#39;,
-      502: &#39;BAD GATEWAY&#39;,
-      503: &#39;SERVICE UNAVAILABLE&#39;,
-      504: &#39;GATEWAY TIMEOUT&#39;,
-      505: &#39;HTTP VERSION NOT SUPPORTED&#39;,
-      506: &#39;VARIANT ALSO NEGOTIATES&#39;,
-      507: &#39;INSUFFICIENT STORAGE&#39;,
-      508: &#39;LOOP DETECTED&#39;,
-      510: &#39;NOT EXTENDED&#39;,
-      511: &#39;NETWORK AUTHENTICATION REQUIRED&#39;,
-  }
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;tcp-3-4-timewait&quot;&gt;tcp 3次握手 4次挥手 TIMEWAIT&lt;/h1&gt;
+&lt;h3 id=&quot;tcp-3-4-timewait&quot;&gt;tcp 3次握手 4次挥手 TIMEWAIT&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -157,9 +405,9 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;tcp&quot;&gt;tcp粘包的问题&lt;/h1&gt;
+&lt;h3 id=&quot;tcp&quot;&gt;tcp粘包的问题&lt;/h3&gt;
 
-&lt;h1 id=&quot;tcp-&quot;&gt;tcp拥塞控制 慢启动&lt;/h1&gt;
+&lt;h3 id=&quot;tcp-&quot;&gt;tcp拥塞控制 慢启动&lt;/h3&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;编解码&lt;/h1&gt;
 &lt;p&gt;## Unicode UTF8 ASCII GBK&lt;/p&gt;
@@ -174,7 +422,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;https&quot;&gt;https原理&lt;/h1&gt;
+&lt;h3 id=&quot;https&quot;&gt;https原理&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -189,7 +437,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;charles&quot;&gt;charles抓包原理&lt;/h2&gt;
+&lt;h3 id=&quot;charles&quot;&gt;charles抓包原理&lt;/h3&gt;
 </description>
         <pubDate>Wed, 16 May 2018 10:30:00 +0800</pubDate>
         <link>/jekyll/update/2018/05/16/http.html</link>
@@ -204,8 +452,9 @@
     
       <item>
         <title>HTTP-code</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;状态码&lt;/h1&gt;
+        <description>&lt;h1 id=&quot;httpsblogcsdnnethuwei2003articledetails70139062&quot;&gt;状态码 &lt;a href=&quot;https://blog.csdn.net/huwei2003/article/details/70139062&quot;&gt;参考&lt;/a&gt;&lt;/h1&gt;
 &lt;ul&gt;
+  &lt;li&gt;304 未修改: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;http(s)请求中经常可以看到各类状态码,详解如下&lt;/p&gt;
 
@@ -480,624 +729,43 @@ class BinTree():
       </item>
     
       <item>
-        <title>基础算法</title>
-        <description>&lt;h1 id=&quot;httpcodevscnproblemset&quot;&gt;算法&lt;a href=&quot;http://codevs.cn/problemset/&quot;&gt;题库&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://algorithm.yuanbin.me/zh-hans/basics_sorting/&quot;&gt;goods&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;httpwuchongmeblog20140209algorithm-sort-summary&quot;&gt;排序&lt;a href=&quot;http://wuchong.me/blog/2014/02/09/algorithm-sort-summary/&quot;&gt;参考&lt;/a&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/onepixel/articles/7674659.html&quot;&gt;示例&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;时间复杂度 空间复杂度 稳定性(如果排序后文件中拥有相同键的项的相对位置不变，这种排序方式是稳定的)&lt;/li&gt;
-  &lt;li&gt;快排 nlogn	非递归写法&lt;/li&gt;
-  &lt;li&gt;堆排序: 大根堆,取走堆顶(实际是数组第一个元素),重新构建大顶堆,依次取走堆顶&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section&quot;&gt;快速排序&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 递归
-def	qsort(L):
-	if len(L) &amp;lt; 2:
-		return L
-
-	return qsort([lt for lt in L[1:] if lt &amp;lt; L[0]]) + L[0:1] + qsort(gt for gt in L[1:] if gt &amp;gt;= L[0])
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;堆排序(堆的存储结构是数组,为何还会有堆排序=&amp;gt;是一种选择排序,比直接的选择排序快)&lt;/h3&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def heapsort(x):
-    if not x or len(x) &amp;lt; 2:
-        return x
-
-    a = []
-    heapq.heapify(x)
-    while len(x):
-        top = heapq.heappop(x)
-        a.append(top)
-        heapq.heapify(x)
-
-    return a
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;归并排序&lt;/h3&gt;
-
-&lt;h2 id=&quot;httpswwwcnblogscomyw09041432p5908444html&quot;&gt;查找 &lt;a href=&quot;https://www.cnblogs.com/yw09041432/p/5908444.html&quot;&gt;示例&lt;/a&gt;&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;顺序查找&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;顺序查找的时间复杂度为O(n)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;二分查找&lt;/h3&gt;
+        <title>middle algorithm</title>
+        <description>&lt;h3 id=&quot;httpsalgorithmyuanbinmezh-hansbasicsalgorithmdivideandconquerhtml&quot;&gt;一些算法思想 &lt;a href=&quot;https://algorithm.yuanbin.me/zh-hans/basics_algorithm/divide_and_conquer.html&quot;&gt;参考&lt;/a&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;最坏情况下，关键词比较次数为log2(n+1)，且期望时间复杂度为O(log2n)；&lt;/p&gt;
+    &lt;p&gt;Generate nth prime number in Python&lt;/p&gt;
 
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  # 递归
-  def bisect(a_list, n):
-      low = 0
-      high = len(a_list)
-      mid = (low+high)//2
-      if a_list[mid] &amp;lt; n:
-          bisect(a_list[mid+1:high], n)
-      elif a_list[mid] &amp;gt; n:
-          bisect(a_list[low:high], n)
-      else:
-          return mid
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  def find_primes(limit):
+      nums = [True] * (limit + 1)
+      nums[0] = nums[1] = False
+
+      for (i, is_prime) in enumerate(nums):
+          if is_prime:
+              yield i
+              for n in range(i * i, limit + 1, i):
+                  nums[n] = False
 
 
-  # 非递归
-  def bisect(a_list, n):
-      low = 0
-      high = len(a_list)
-      while low &amp;lt; high:
-          mid = (low+high)//2
-          if a_list[mid] == n:
-              return mid
-          elif a_list[mid] &amp;lt; n:
-              low = mid + 1
-          else:
-              high = mid
+  def find_n_prime(n):
+      for i in range(n, (n * n) + 1, n):
+          primes = list(find_primes(i))
+          if len(primes) &amp;gt;= n:
+              return primes[n - 1]
+
+
+  print(find_n_prime(5))
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;插值查找&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;改进 mid = (low+high)/2 为 mid=low+1/2&lt;em&gt;(high-low) 即 mid=low+(key-a[low])/(a[high]-a[low])&lt;/em&gt;(high-low)&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3 id=&quot;section&quot;&gt;问题及解决办法&lt;/h3&gt;
 
 </description>
         <pubDate>Wed, 16 May 2018 10:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/05/16/algorithm.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/05/16/algorithm.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>python</title>
-        <description>&lt;h1 id=&quot;python&quot;&gt;python基础&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;py2于2019年底停止支持&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;foo&#39;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;python-iter-slice-islice&quot;&gt;python iter方法 slice类 islice方法&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;iter返回一个迭代器&lt;/li&gt;
-  &lt;li&gt;python的迭代器为什么一定要实现__iter__方法&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;python-re&quot;&gt;python re模块&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;re.findall&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;python-xrange-range&quot;&gt;python xrange range&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;xrange() 函数用法与 range 完全相同，所不同的是生成的不是一个数组，而是一个生成器。用xrange创建一个生成器 (i for i in xrange(5))&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;python-1&quot;&gt;python中元组的比较&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;如果比较的元素是同类型的,则比较其值,返回结果。如果两个元素不是同一种类型,则检查它们是否是数字。&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  cmp((123, &#39;123&#39;), (123, &#39;123&#39;, 1)) == -1
-  cmp((223, &#39;123&#39;), (123, &#39;123&#39;, 1)) == 1
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;pythonstring-unicode-byteshttpwwwcnblogscomonepixelarticles7357273html&quot;&gt;python中的string unicode bytes&lt;a href=&quot;http://www.cnblogs.com/onepixel/articles/7357273.html&quot;&gt;示例&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;unicode是字符集：为每一个「字符」分配一个唯一的 ID&lt;/li&gt;
-  &lt;li&gt;utf8是编码规则: 字节序列的规则&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;python-obj--str&quot;&gt;python 时间obj–str转换&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;datetime转str&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  now = datetime.datetime.now()
-  now_str = now.strftime(&#39;%Y-%m-%d %H:%M:%S&#39;)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;str转datetime&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  datetime.datetime.strptime(now_str, &quot;%Y-%m-%d %H:%M:%S&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;time转str&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  now = time.strftime(&quot;%Y-%m-%d %H:%M:%S&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;datetime转时间戳&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  t = time.mktime(now.timetuple())
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;时间戳转datetime&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  t = time.time()
-  datetime.datetime.fromtimestamp(t)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;python-generator&quot;&gt;python generator&lt;/h3&gt;
-&lt;p&gt;通过列表生成式，我们可以直接创建一个列表。但是，受到内存限制，列表容量肯定是有限的。而且，创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。&lt;/p&gt;
-
-&lt;p&gt;所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器（Generator）。&lt;/p&gt;
-
-&lt;p&gt;要创建一个generator，有很多种方法。第一种方法很简单，只要把一个列表生成式的[]改成()，就创建了一个generator：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;L = [x * x for x in range(10)]
-L
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-g = (x * x for x in range(10))
-g
-&amp;lt;generator object &amp;lt;genexpr&amp;gt; at 0x104feab40&amp;gt;
-
-def my_gen():  
-	n = 1  
-	print(&#39;This is printed first&#39;)  
-	# Generator function contains yield statements  
-	yield n  
-
-	n += 1  
-	print(&#39;This is printed second&#39;)  
-	yield n  
-
-	n += 1  
-	print(&#39;This is printed at last&#39;)  
-	yield n  
-
-for item in my_gen():  
-	print(item) 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;python-coroutine&quot;&gt;python coroutine&lt;/h3&gt;
-&lt;p&gt;python协程 一图以蔽之 &lt;img src=&quot;https://awesome-tao.github.io/images/coroutine-simple.png&quot; alt=&quot;图片&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def averager():
-    total = 0
-	count = 0
-	average = None
-	while True:
-	    in_num = yield average
-		count += 1
-		total += in_num
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;hr /&gt;
-
-</description>
-        <pubDate>Wed, 16 May 2018 09:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/05/16/python.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/05/16/python.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>工具</title>
-        <description>&lt;h3 id=&quot;elasticsearch&quot;&gt;elasticsearch&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;原理&lt;/p&gt;
-
-    &lt;p&gt;时间序列数据库的秘密(2)——索引&lt;a href=&quot;http://www.infoq.com/cn/articles/database-timestamp-02?utm_source=infoq&amp;amp;utm_medium=related_content_link&amp;amp;utm_campaign=relatedContent_articles_clk&quot;&gt;&lt;/a&gt;
-  (http://www.infoq.com/cn/articles/database-timestamp-01)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 11 May 2018 11:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/05/11/util.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/05/11/util.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>web-framework</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://yiyibooks.cn/xx/Django_1.11.6/topics/index.html&quot;&gt;django中文文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.djangoproject.com/en/2.0/&quot;&gt;django英文文档&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;web-frameworkwhat-is-a-web-frameworkhttpsjeffknuppcomblog20140303what-is-a-web-framework&quot;&gt;设计一个web framework需要哪些功能或组件&lt;a href=&quot;https://jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/&quot;&gt;what-is-a-web-framework&lt;/a&gt;&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;其实一个Web App，就是写一个WSGI的处理函数，针对每个HTTP请求进行响应&lt;a href=&quot;https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/0014023080708565bc89d6ab886481fb25a16cdc3b773f0000&quot;&gt;test&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;URL映射&lt;/li&gt;
-      &lt;li&gt;网页模板 网页缓存&lt;/li&gt;
-      &lt;li&gt;request response&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;cap&quot;&gt;锁 CAP原理&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;分布式锁	https://www.cnblogs.com/austinspark-jessylu/p/8043726.html&lt;/li&gt;
-  &lt;li&gt;文件读写锁&lt;/li&gt;
-  &lt;li&gt;互斥锁 乐观悲观锁&lt;/li&gt;
-  &lt;li&gt;线程安全的实现方法&lt;/li&gt;
-  &lt;li&gt;进程内缓存&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;事务&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;分布式事务&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;tips&quot;&gt;tips&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;URL拦截器&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;django&quot;&gt;django源码分析&lt;/h3&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;特点及同其他框架的比较&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;django有哪些有点&lt;/p&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;
-        &lt;p&gt;大而全&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;app可插拔&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;orm 写好model可直接生成表&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;django vs tornado&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;django同步 vs. tornado异步&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;使用&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;命令&lt;/p&gt;
-
-    &lt;p&gt;python manage.py migrate —&amp;gt; migrate命令会查找你所有可用的模型然后在你的数据库中创建还不存在的数据库表&lt;/p&gt;
-
-    &lt;p&gt;django-admin startproject mysite —&amp;gt; 创建一个项目&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;模板过滤器&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Fri, 11 May 2018 09:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/05/11/web-framework.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/05/11/web-framework.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>ffmpeg命令</title>
-        <description>&lt;h3 id=&quot;tips&quot;&gt;tips:&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;一些比较重要的参数
-    &lt;ul&gt;
-      &lt;li&gt;r 帧率&lt;/li&gt;
-      &lt;li&gt;s 裁剪尺寸&lt;/li&gt;
-      &lt;li&gt;b 比特率(视频清晰度)&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;获取media信息
-  ffprobe -show_format -show_streams xxx.video&lt;/p&gt;
-
-    &lt;p&gt;-gif duration&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;exiftool -Duration gif_tmp_path&lt;/td&gt;
-          &lt;td&gt;perl -lane ‘print $1 if /: ?([0-9]+.[0-9]+)/’&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;压缩&lt;/p&gt;
-
-    &lt;p&gt;gif 转 mp4: ffmpeg -r 40 -i input.gif output.mp4 (-r参数是帧率,数值越大,播放越快)&lt;/p&gt;
-
-    &lt;p&gt;MP4转gif: ffmpeg -i output.mp4 -r 10 1233333.gif -hide_banner (-hide_banner 可以隐藏不必要的多余讯息)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;mediainfo-software-mediainfohttpsmediaareanetenmediainfodownloadubuntu&quot;&gt;mediainfo software新发现 &lt;a href=&quot;https://mediaarea.net/en/MediaInfo/Download/Ubuntu&quot;&gt;MediaInfo&lt;/a&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;一些参数详解&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;Codec ID: mp42 isom&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Format profile: High@L3.1 High@L4.0&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;Codec settings: CABAC / 4 Ref Frames ; CABAC / 5 Ref Frames&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ffmpeg&quot;&gt;ffmpeg命令&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;视频旋转&lt;/li&gt;
-  &lt;li&gt;视频宽高&lt;/li&gt;
-  &lt;li&gt;打水印&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;压缩&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;gt() 大于, gte() 大于等于, lt() 小于 and lte() 小于等于&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;ffmpeg&lt;a href=&quot;https://www.gitbook.com/book/xdsnet/other-doc-cn-ffmpeg/details&quot;&gt;中文文档&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ffmpeg&lt;a href=&quot;https://xdsnet.gitbooks.io/other-doc-cn-ffmpeg/content/ffmpeg-doc-cn-08.html&quot;&gt;表达式计算/求值&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ffmpeg 码率 帧率&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;码率一般指比特率，比特率是指每秒传送的比特(bit)数。单位为 bps(Bit Per Second)，比特率越高，传送数据速度越快。&lt;/p&gt;
-      &lt;/li&gt;
-      &lt;li&gt;
-        &lt;p&gt;帧率每秒显示帧数。&lt;/p&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;ffmpeg overlay用法 &lt;a href=&quot;https://ffmpeg.org/ffmpeg-filters.html#Commands-15&quot;&gt;filters中用法&lt;/a&gt;&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  overlay=x=&#39;if(gte(t,2), -w+(t-2)*20, NAN)&#39;:y=0
-
-  lte(x, y)
-  返回x&amp;lt;=y判断式值，符合为1，否则为0
-
-  gte(x, y)
-  返回判断x&amp;gt;=y的结果，符合则为1，否则为0
-
-  if(x, y)
-  判断x值，如果x值为非0，则返回y，否则返回0
-
-  if(x, y, z)
-  判断x值，如果x值为非0，则返回y，否则返回z.
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;python-text-img&quot;&gt;python text-&amp;gt;img&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;PIL&lt;a href=&quot;http://pillow.readthedocs.io/en/latest/index.html&quot;&gt;文档&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;一些概念&lt;/p&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;RGBA是代表Red（红色） Green（绿色） Blue（蓝色）和 Alpha的色彩空间，也就是透明度/不透明度。0x80是128，大约是255的一半，A为128即为50%透明度&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;代码&lt;/p&gt;
-
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  def text2line(text, font, special_padding, ch, width=466, 
-      rightpadding=12, 
-      leftpadding=12):
-      REPLACEMENT_CHARACTER = u&#39;\uFFFD&#39;
-
-      lines = []
-      line = u&quot;&quot;
-      sencond_flag = 0
-
-      if not ch:
-          text_list = text.split()
-      else:
-          text_list = text
-
-      for word in text_list:
-          if not ch:
-              word = word + &#39; &#39;
-              rightpadding = 0
-
-          if word == REPLACEMENT_CHARACTER:
-              lines.append(line)
-              sencond_flag = 1
-              line = u&quot;&quot;
-              print line, lines
-          elif sencond_flag == 0 and font.getsize(line + word)[0] &amp;lt;= 
-                  (width - rightpadding - leftpadding):
-              line += word
-              sencond_flag = 1
-          elif sencond_flag == 1 and font.getsize(line + word)[0] &amp;lt;= 
-                  (width - rightpadding - leftpadding - special_padding):
-              line += word
-          else:
-              lines.append(line)
-              line = u&quot;&quot;
-
-              line += word
-
-      if len(line) != 0:
-          lines.append(line[:])  # add the last line
-      line_height = font.getsize(text)[1] + 5
-      img_height = line_height * (len(lines))
-
-      return img_height, line_height, lines
-  ------------------------------------------------------------------
-
-  from PIL import Image, ImageDraw, ImageFont
-  # 在图上写字
-  font = ImageFont.truetype(&quot;/home/arial.ttf&quot;, 47)
-  img = Image.open(&quot;/home/first-bar.png&quot;)
-  draw = ImageDraw.Draw(img)
-  draw.text((240, 0), word_name, &#39;#ffffff&#39;, font=font)
-  # img.show()
-  ret_path = &#39;/home/1.png&#39;
-  img.save(ret_path)
-	
-  # 新建空白图片写字
-  font = ImageFont.truetype(&quot;/home/pingfang.ttf&quot;, 24)
-  img = Image.new(&quot;RGBA&quot;, (466, 52), (0, 0, 0, 20))
-  draw = ImageDraw.Draw(img)
-  draw_text = &quot;test&quot;
-  draw.text((12, 5), unicode(draw_text,&#39;utf-8&#39;), &quot;#FFFFFF&quot;, font=font)
-  # img.show()
-  ret_path = &#39;/home/2.png&#39;
-  img.save(ret_path)
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 14 Mar 2018 10:30:00 +0800</pubDate>
-        <link>/jekyll/update/2018/03/14/ffmpeg.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/03/14/ffmpeg.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>flutter</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;安装&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;git clone -b beta https://github.com/flutter/flutter.git&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;export PATH=&lt;code class=&quot;highlighter-rouge&quot;&gt;pwd&lt;/code&gt;/flutter/bin:$PATH&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;flutter doctor (检测安装依赖程序)&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Sat, 10 Mar 2018 09:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/03/10/flutter.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/03/10/flutter.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>MQ</title>
-        <description>&lt;h1 id=&quot;mqmessage-queue&quot;&gt;MQ即Message Queue&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;nsq&quot;&gt;nsq&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Sat, 10 Mar 2018 09:00:00 +0800</pubDate>
-        <link>/jekyll/update/2018/03/10/mq.html</link>
-        <guid isPermaLink="true">/jekyll/update/2018/03/10/mq.html</guid>
+        <link>/jekyll/update/2018/05/16/algorithm-middle.html</link>
+        <guid isPermaLink="true">/jekyll/update/2018/05/16/algorithm-middle.html</guid>
         
         
         <category>jekyll</category>

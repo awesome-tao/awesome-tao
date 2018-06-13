@@ -44,6 +44,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       </div>
     </nav>
 
@@ -67,19 +73,44 @@
   <li>py2于2019年底停止支持</li>
 </ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span></code></pre></figure>
+<h2 id="timeittimeit-">timeit.timeit 测试代码运行时间</h2>
+
+<h3 id="python-dict">python dict遍历速度最快方法是:</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    for key in a_dict:iterkeys():
+        pass
+
+    for key in a_dict:
+        pass
+</code></pre>
+</div>
+
+<h3 id="python-">python 类装饰器</h3>
+
+<ul>
+  <li>
+    <p>装饰的是一个类</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  @model.entity
+  class LineItem:
+      def __init__(self):
+          pass
+
+  def entity(cls):
+      for key, attr in cls.__dict__.items():
+          if isinstance(attr, Validated):
+              type_name = type(attr).__name__
+              attr.storage_name = '_{}#{}'.format(type_name, key)
+      return cls
+</code></pre>
+    </div>
+  </li>
+</ul>
 
 <h3 id="python-iter-slice-islice">python iter方法 slice类 islice方法</h3>
 <ul>
   <li>iter返回一个迭代器</li>
   <li>python的迭代器为什么一定要实现__iter__方法</li>
-</ul>
-
-<h3 id="python-re">python re模块</h3>
-<ul>
-  <li>re.findall</li>
 </ul>
 
 <h3 id="python-xrange-range">python xrange range</h3>

@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MQ</title>
-  <meta name="description" content="MQ即Message Queue">
+  <title>middle algorithm</title>
+  <meta name="description" content="一些算法思想 参考">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/jekyll/update/2018/03/10/mq.html">
+  <link rel="canonical" href="/jekyll/update/2018/05/16/algorithm-middle.html">
   <link rel="alternate" type="application/rss+xml" title="Ashes" href="/feed.xml">
 </head>
 
@@ -63,22 +63,43 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">MQ</h1>
-    <p class="post-meta"><time datetime="2018-03-10T09:00:00+08:00" itemprop="datePublished">Mar 10, 2018</time></p>
+    <h1 class="post-title" itemprop="name headline">middle algorithm</h1>
+    <p class="post-meta"><time datetime="2018-05-16T10:00:00+08:00" itemprop="datePublished">May 16, 2018</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h1 id="mqmessage-queue">MQ即Message Queue</h1>
+    <h3 id="httpsalgorithmyuanbinmezh-hansbasicsalgorithmdivideandconquerhtml">一些算法思想 <a href="https://algorithm.yuanbin.me/zh-hans/basics_algorithm/divide_and_conquer.html">参考</a></h3>
 
 <ul>
-  <li>部分MQ中有延迟执行(定时执行的功能). 如果时效性要求不高的话可以用crontab，每5分钟执行一次落在该时间内的任务(用cache实现)</li>
+  <li>
+    <p>Generate nth prime number in Python</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  def find_primes(limit):
+      nums = [True] * (limit + 1)
+      nums[0] = nums[1] = False
+
+      for (i, is_prime) in enumerate(nums):
+          if is_prime:
+              yield i
+              for n in range(i * i, limit + 1, i):
+                  nums[n] = False
+
+
+  def find_n_prime(n):
+      for i in range(n, (n * n) + 1, n):
+          primes = list(find_primes(i))
+          if len(primes) &gt;= n:
+              return primes[n - 1]
+
+
+  print(find_n_prime(5))
+</code></pre>
+    </div>
+  </li>
 </ul>
 
-<h3 id="nsq">nsq</h3>
+<h3 id="section">问题及解决办法</h3>
 
-<ul>
-  <li>nsq中延迟执行最长为1小时后，关键字defer(deferred), MaxReqTimeout==1hour</li>
-</ul>
 
   </div>
 

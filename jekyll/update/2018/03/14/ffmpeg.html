@@ -44,6 +44,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       </div>
     </nav>
 
@@ -93,6 +99,8 @@
     <p>gif 转 mp4: ffmpeg -r 40 -i input.gif output.mp4 (-r参数是帧率,数值越大,播放越快)</p>
 
     <p>MP4转gif: ffmpeg -i output.mp4 -r 10 1233333.gif -hide_banner (-hide_banner 可以隐藏不必要的多余讯息)</p>
+
+    <p>“height not divisible by 2” error —&gt; -vf scale=1280:-1   -1 表示按输入尺寸等比自动计算</p>
   </li>
 </ul>
 

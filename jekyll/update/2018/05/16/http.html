@@ -44,6 +44,12 @@
         
           
         
+          
+        
+          
+        
+          
+        
       </div>
     </nav>
 
@@ -93,12 +99,14 @@
   </li>
   <li>
     <ol>
-      <li></li>
+      <li>X-Forwarded-For ???</li>
     </ol>
   </li>
 </ul>
 
-<h1 id="get-post-head-put-delete-options-trace">get post head put delete options trace</h1>
+<h3 id="dns-over-tls">dns(应用层) over tls(安全传输层协议)</h3>
+
+<h3 id="get-post-head-put-delete-options-trace">get post head put delete options trace</h3>
 
 <ul>
   <li>
@@ -126,78 +134,7 @@
   </li>
 </ul>
 
-<h1 id="httphttpsblogcsdnnethuwei2003articledetails70139062">http状态码<a href="https://blog.csdn.net/huwei2003/article/details/70139062">详解</a></h1>
-<ul>
-  <li>
-    <p>304 未修改: 自从上次请求后，请求的网页未修改过。服务器返回此响应时，不会返回网页内容。如果网页自请求者上次请求后再也没有更改过，您应将服务器配置为返回此响应（称为 If-Modified-Since HTTP 标头）。服务器可以告诉 Googlebot 自从上次抓取后网页没有变更，进而节省带宽和开销。</p>
-
-    <div class="highlighter-rouge"><pre class="highlight"><code>  REASON_PHRASES = {
-      100: 'CONTINUE',
-      101: 'SWITCHING PROTOCOLS',
-      102: 'PROCESSING',
-      200: 'OK',                                      # 请求没问题,实体的主体部分包含了所请求的资源
-      201: 'CREATED',
-      202: 'ACCEPTED',
-      203: 'NON-AUTHORITATIVE INFORMATION',
-      204: 'NO CONTENT',
-      205: 'RESET CONTENT',
-      206: 'PARTIAL CONTENT',
-      207: 'MULTI-STATUS',
-      208: 'ALREADY REPORTED',
-      226: 'IM USED',
-      300: 'MULTIPLE CHOICES',
-      301: 'MOVED PERMANENTLY',                       # 永久重定向
-      302: 'FOUND',
-      303: 'SEE OTHER',
-      304: 'NOT MODIFIED',                            # 客户端get请求,而最近资源未被修改,可用来说明资源未被修改.响应不应该包含实体的主体部分
-      305: 'USE PROXY',
-      306: 'RESERVED',
-      307: 'TEMPORARY REDIRECT',
-      308: 'PERMANENT REDIRECT',
-      400: 'BAD REQUEST',
-      401: 'UNAUTHORIZED',
-      402: 'PAYMENT REQUIRED',
-      403: 'FORBIDDEN',
-      404: 'NOT FOUND',
-      405: 'METHOD NOT ALLOWED',
-      406: 'NOT ACCEPTABLE',
-      407: 'PROXY AUTHENTICATION REQUIRED',
-      408: 'REQUEST TIMEOUT',
-      409: 'CONFLICT',
-      410: 'GONE',
-      411: 'LENGTH REQUIRED',
-      412: 'PRECONDITION FAILED',
-      413: 'REQUEST ENTITY TOO LARGE',
-      414: 'REQUEST-URI TOO LONG',
-      415: 'UNSUPPORTED MEDIA TYPE',
-      416: 'REQUESTED RANGE NOT SATISFIABLE',
-      417: 'EXPECTATION FAILED',
-      418: "I'M A TEAPOT",
-      422: 'UNPROCESSABLE ENTITY',
-      423: 'LOCKED',
-      424: 'FAILED DEPENDENCY',
-      426: 'UPGRADE REQUIRED',
-      428: 'PRECONDITION REQUIRED',
-      429: 'TOO MANY REQUESTS',
-      431: 'REQUEST HEADER FIELDS TOO LARGE',
-      500: 'INTERNAL SERVER ERROR',
-      501: 'NOT IMPLEMENTED',
-      502: 'BAD GATEWAY',
-      503: 'SERVICE UNAVAILABLE',
-      504: 'GATEWAY TIMEOUT',
-      505: 'HTTP VERSION NOT SUPPORTED',
-      506: 'VARIANT ALSO NEGOTIATES',
-      507: 'INSUFFICIENT STORAGE',
-      508: 'LOOP DETECTED',
-      510: 'NOT EXTENDED',
-      511: 'NETWORK AUTHENTICATION REQUIRED',
-  }
-</code></pre>
-    </div>
-  </li>
-</ul>
-
-<h1 id="tcp-3-4-timewait">tcp 3次握手 4次挥手 TIMEWAIT</h1>
+<h3 id="tcp-3-4-timewait">tcp 3次握手 4次挥手 TIMEWAIT</h3>
 
 <ul>
   <li>
@@ -208,9 +145,9 @@
   </li>
 </ul>
 
-<h1 id="tcp">tcp粘包的问题</h1>
+<h3 id="tcp">tcp粘包的问题</h3>
 
-<h1 id="tcp-">tcp拥塞控制 慢启动</h1>
+<h3 id="tcp-">tcp拥塞控制 慢启动</h3>
 
 <h1 id="section">编解码</h1>
 <p>## Unicode UTF8 ASCII GBK</p>
@@ -225,7 +162,7 @@
   </li>
 </ul>
 
-<h1 id="https">https原理</h1>
+<h3 id="https">https原理</h3>
 
 <ul>
   <li>
@@ -240,7 +177,7 @@
   </li>
 </ul>
 
-<h2 id="charles">charles抓包原理</h2>
+<h3 id="charles">charles抓包原理</h3>
 
   </div>
 
