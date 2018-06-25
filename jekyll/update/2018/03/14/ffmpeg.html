@@ -74,7 +74,7 @@
   <li>一些比较重要的参数
     <ul>
       <li>r 帧率</li>
-      <li>s 裁剪尺寸</li>
+      <li>s 裁剪尺寸 (wxh)</li>
       <li>b 比特率(视频清晰度)</li>
     </ul>
   </li>
@@ -101,6 +101,15 @@
     <p>MP4转gif: ffmpeg -i output.mp4 -r 10 1233333.gif -hide_banner (-hide_banner 可以隐藏不必要的多余讯息)</p>
 
     <p>“height not divisible by 2” error —&gt; -vf scale=1280:-1   -1 表示按输入尺寸等比自动计算</p>
+  </li>
+  <li>
+    <p>有些 GIF 转化出来的 MP4 不能被 Mac QuickTime Player.app 播放，需要添加 pixel formal 参数</p>
+
+    <p>ffmpeg -i input.gif -vf scale=420:-2,format=yuv420p out.mp4</p>
+
+    <p>使用 yunv420p 需要保证长宽为偶数，这里同时使用了 scale=420:-2</p>
+
+    <p>QuickTime Player 对 H.264 视频只支持 YUV 色域 4:2:0 方式的二次插值算法。 <a href="https://trac.ffmpeg.org/wiki/Encode/H.264#Encodingfordumbplayers">wiki解释</a></p>
   </li>
 </ul>
 

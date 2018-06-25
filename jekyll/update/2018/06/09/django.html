@@ -62,7 +62,45 @@
       <div class="wrapper">
         <h1 id="httpsdocsdjangoprojectcomzh-hans20">文档 https://docs.djangoproject.com/zh-hans/2.0/</h1>
 
-<h1 id="django">django</h1>
+<h3 id="section">开源组件</h3>
+<ul>
+  <li>
+    <p><a href="https://github.com/rosarior/awesome-django">awesome</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/django-oscar/django-oscar">电子商务</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/pydanny/cookiecutter-django">代码结构布局</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/joke2k/django-environ">环境变量</a></p>
+  </li>
+</ul>
+
+<h3 id="django-contenttypes">django contenttypes</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>详解：
+</code></pre>
+</div>
+
+<h3 id="field">Field</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>- DateTimeField: auto_now_add 为添加时的时间,更新对象时不会有变动; auto_now无论是你添加还是修改对象,时间为你添加或者修改的时间
+- blank=True 字段可以为空, null=True django用Null来存储空值 日期型、时间型和数字型字段不接受空字符串
+</code></pre>
+</div>
+
+<h1 id="django">扩展Django用户模型</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>https://docs.djangoproject.com/en/1.11/topics/auth/customizing/#auth-custom-user
+
+[参考](https://blog.csdn.net/sergeycao/article/details/77572586)
+
+https://www.v2ex.com/t/394663
+</code></pre>
+</div>
+
+<h1 id="django-1">django</h1>
 <ul>
   <li>
     <p>python -m django –version</p>
@@ -74,7 +112,26 @@
     <p>python manage.py startapp polls</p>
   </li>
   <li>python manage.py makemigrations polls</li>
-  <li>python manage.py migrate</li>
+  <li>
+    <p>python manage.py migrate</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  +----------------------------+
+  | Tables_in_xxx              |
+  +----------------------------+
+  | auth_group                 |
+  | auth_group_permissions     |
+  | auth_permission            |
+  | auth_user                  |
+  | auth_user_groups           |
+  | auth_user_user_permissions |
+  | django_admin_log           |
+  | django_content_type        |
+  | django_migrations          |
+  | django_session             |
+  +----------------------------+
+</code></pre>
+    </div>
+  </li>
   <li>
     <p>python manage.py sqlmigrate polls 0001</p>
   </li>
@@ -82,10 +139,19 @@
   <li>
     <p>python manage.py createsuperuser</p>
   </li>
-  <li>python manage.py test polls</li>
+  <li>
+    <p>python manage.py test polls</p>
+  </li>
+  <li>auth_user表保存着admin的用户</li>
 </ul>
 
-<h3 id="section">解释</h3>
+<h3 id="django-rest-framework">django rest framework详解</h3>
+
+<ul>
+  <li><a href="https://www.cnblogs.com/vipchenwei/p/7867028.html">参考</a></li>
+</ul>
+
+<h3 id="section-1">解释</h3>
 <ul>
   <li>DJANGO_ROOT</li>
   <li>PROJECT_ROOT</li>
@@ -101,7 +167,7 @@
   <li>TEMPLATES</li>
 </ul>
 
-<h3 id="section-1">结构</h3>
+<h3 id="section-2">结构</h3>
 <ul>
   <li>参考 http://www.loonapp.com/blog/11/</li>
   <li>https://github.com/Mischback/django-project-skeleton</li>

@@ -75,10 +75,12 @@
     <p>http(s)请求中经常可以看到各类状态码,详解如下</p>
 
     <div class="highlighter-rouge"><pre class="highlight"><code>  REASON_PHRASES = {
+      100 ~ 199 信息性状态码
       100: 'CONTINUE',
       101: 'SWITCHING PROTOCOLS',
       102: 'PROCESSING',
 
+      200 ~ 299 成功状态码
       # 请求没问题,实体的主体部分包含了所请求的资源
       200: 'OK',
 
@@ -87,32 +89,29 @@
       203: 'NON-AUTHORITATIVE INFORMATION',
       204: 'NO CONTENT',
       205: 'RESET CONTENT',
-
       # 成功执行了一个部分或range请求
       206: 'PARTIAL CONTENT',
-
       207: 'MULTI-STATUS',
       208: 'ALREADY REPORTED',
       226: 'IM USED',
       300: 'MULTIPLE CHOICES',
 
+      300 ~ 399 重定向状态码
       # 永久重定向
       301: 'MOVED PERMANENTLY',
-
       # 临时重定向
       302: 'FOUND',
-
       303: 'SEE OTHER',
-
       # 客户端get请求,而最近资源未被修改,可用来说明资源未被修改.
         响应不应该包含实体的主体部分(不会返回网页内容,自从上次抓取后网页没有变更,
         进而节省带宽和开销)
       304: 'NOT MODIFIED',
-
       305: 'USE PROXY',
       306: 'RESERVED',
       307: 'TEMPORARY REDIRECT',
       308: 'PERMANENT REDIRECT',
+
+      400 ~ 499 客户端错误状态码
       400: 'BAD REQUEST',
       401: 'UNAUTHORIZED',
       402: 'PAYMENT REQUIRED',
@@ -139,20 +138,18 @@
       428: 'PRECONDITION REQUIRED',
       429: 'TOO MANY REQUESTS',
       431: 'REQUEST HEADER FIELDS TOO LARGE',
-      500: 'INTERNAL SERVER ERROR',
+      499: 'client has closed connection' (nginx自定义) (这很有可能是因为服务器端处理的时间过长,客户端“不耐烦”了),
 
+      500 ~ 599 服务器错误状态码
+      500: 'INTERNAL SERVER ERROR',
       # 客户端发起的请求超出服务器的能力范围(比如,使用了服务器不支持的请求方法)
       501: 'NOT IMPLEMENTED',
-
       # 网关错误,找不到后端服务
       502: 'BAD GATEWAY',
-
       # 一般是服务器有bug
       503: 'SERVICE UNAVAILABLE',
-
       # 服务器处理时间太长,超时
       504: 'GATEWAY TIMEOUT',
-
       505: 'HTTP VERSION NOT SUPPORTED',
       506: 'VARIANT ALSO NEGOTIATES',
       507: 'INSUFFICIENT STORAGE',
@@ -163,6 +160,31 @@
 </code></pre>
     </div>
   </li>
+</ul>
+
+<h1 id="http-header-detail">http header detail</h1>
+
+<h3 id="section">类型</h3>
+
+<ul>
+  <li>
+    <p>通用头字段()</p>
+  </li>
+  <li>
+    <p>请求头字段()</p>
+  </li>
+  <li>
+    <p>响应头字段()</p>
+  </li>
+  <li>
+    <p>实体头字段()</p>
+  </li>
+</ul>
+
+<h3 id="section-1">请求字段</h3>
+
+<ul>
+  <li><a href="https://zh.wikipedia.org/wiki/HTTP%E5%A4%B4%E5%AD%97%E6%AE%B5">wiki</a></li>
 </ul>
 
 

@@ -5,15 +5,53 @@
     <description></description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 13 Jun 2018 09:44:12 +0800</pubDate>
-    <lastBuildDate>Wed, 13 Jun 2018 09:44:12 +0800</lastBuildDate>
+    <pubDate>Mon, 25 Jun 2018 16:59:21 +0800</pubDate>
+    <lastBuildDate>Mon, 25 Jun 2018 16:59:21 +0800</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>django</title>
         <description>&lt;h1 id=&quot;httpsdocsdjangoprojectcomzh-hans20&quot;&gt;文档 https://docs.djangoproject.com/zh-hans/2.0/&lt;/h1&gt;
 
-&lt;h1 id=&quot;django&quot;&gt;django&lt;/h1&gt;
+&lt;h3 id=&quot;section&quot;&gt;开源组件&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/rosarior/awesome-django&quot;&gt;awesome&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/django-oscar/django-oscar&quot;&gt;电子商务&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/pydanny/cookiecutter-django&quot;&gt;代码结构布局&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/joke2k/django-environ&quot;&gt;环境变量&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;django-contenttypes&quot;&gt;django contenttypes&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;详解：
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;field&quot;&gt;Field&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- DateTimeField: auto_now_add 为添加时的时间,更新对象时不会有变动; auto_now无论是你添加还是修改对象,时间为你添加或者修改的时间
+- blank=True 字段可以为空, null=True django用Null来存储空值 日期型、时间型和数字型字段不接受空字符串
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;django&quot;&gt;扩展Django用户模型&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://docs.djangoproject.com/en/1.11/topics/auth/customizing/#auth-custom-user
+
+[参考](https://blog.csdn.net/sergeycao/article/details/77572586)
+
+https://www.v2ex.com/t/394663
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;django-1&quot;&gt;django&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;
     &lt;p&gt;python -m django –version&lt;/p&gt;
@@ -25,7 +63,26 @@
     &lt;p&gt;python manage.py startapp polls&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;python manage.py makemigrations polls&lt;/li&gt;
-  &lt;li&gt;python manage.py migrate&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;python manage.py migrate&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  +----------------------------+
+  | Tables_in_xxx              |
+  +----------------------------+
+  | auth_group                 |
+  | auth_group_permissions     |
+  | auth_permission            |
+  | auth_user                  |
+  | auth_user_groups           |
+  | auth_user_user_permissions |
+  | django_admin_log           |
+  | django_content_type        |
+  | django_migrations          |
+  | django_session             |
+  +----------------------------+
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;python manage.py sqlmigrate polls 0001&lt;/p&gt;
   &lt;/li&gt;
@@ -33,10 +90,19 @@
   &lt;li&gt;
     &lt;p&gt;python manage.py createsuperuser&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;python manage.py test polls&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;python manage.py test polls&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;auth_user表保存着admin的用户&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section&quot;&gt;解释&lt;/h3&gt;
+&lt;h3 id=&quot;django-rest-framework&quot;&gt;django rest framework详解&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.cnblogs.com/vipchenwei/p/7867028.html&quot;&gt;参考&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;解释&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;DJANGO_ROOT&lt;/li&gt;
   &lt;li&gt;PROJECT_ROOT&lt;/li&gt;
@@ -52,7 +118,7 @@
   &lt;li&gt;TEMPLATES&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;section-1&quot;&gt;结构&lt;/h3&gt;
+&lt;h3 id=&quot;section-2&quot;&gt;结构&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;参考 http://www.loonapp.com/blog/11/&lt;/li&gt;
   &lt;li&gt;https://github.com/Mischback/django-project-skeleton&lt;/li&gt;
@@ -180,6 +246,13 @@
 &lt;ul&gt;
   &lt;li&gt;detail &lt;a href=&quot;https://www.elastic.co/guide/cn/elasticsearch/guide/current/_tutorial_conclusion.html&quot;&gt;文档&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;python &lt;a href=&quot;https://elasticsearch-py.readthedocs.io/en/master/api.html&quot;&gt;api&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;关键字智能提示&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://elasticsearch.cn/article/142&lt;/li&gt;
+  &lt;li&gt;https://tech.meituan.com/pinyin-suggest.html&lt;/li&gt;
+  &lt;li&gt;https://blog.csdn.net/v_july_v/article/details/11288807&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;inverted-index&quot;&gt;倒排索引 Inverted index&lt;/h3&gt;
@@ -459,10 +532,12 @@ es没有事务
     &lt;p&gt;http(s)请求中经常可以看到各类状态码,详解如下&lt;/p&gt;
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  REASON_PHRASES = {
+      100 ~ 199 信息性状态码
       100: &#39;CONTINUE&#39;,
       101: &#39;SWITCHING PROTOCOLS&#39;,
       102: &#39;PROCESSING&#39;,
 
+      200 ~ 299 成功状态码
       # 请求没问题,实体的主体部分包含了所请求的资源
       200: &#39;OK&#39;,
 
@@ -471,32 +546,29 @@ es没有事务
       203: &#39;NON-AUTHORITATIVE INFORMATION&#39;,
       204: &#39;NO CONTENT&#39;,
       205: &#39;RESET CONTENT&#39;,
-
       # 成功执行了一个部分或range请求
       206: &#39;PARTIAL CONTENT&#39;,
-
       207: &#39;MULTI-STATUS&#39;,
       208: &#39;ALREADY REPORTED&#39;,
       226: &#39;IM USED&#39;,
       300: &#39;MULTIPLE CHOICES&#39;,
 
+      300 ~ 399 重定向状态码
       # 永久重定向
       301: &#39;MOVED PERMANENTLY&#39;,
-
       # 临时重定向
       302: &#39;FOUND&#39;,
-
       303: &#39;SEE OTHER&#39;,
-
       # 客户端get请求,而最近资源未被修改,可用来说明资源未被修改.
         响应不应该包含实体的主体部分(不会返回网页内容,自从上次抓取后网页没有变更,
         进而节省带宽和开销)
       304: &#39;NOT MODIFIED&#39;,
-
       305: &#39;USE PROXY&#39;,
       306: &#39;RESERVED&#39;,
       307: &#39;TEMPORARY REDIRECT&#39;,
       308: &#39;PERMANENT REDIRECT&#39;,
+
+      400 ~ 499 客户端错误状态码
       400: &#39;BAD REQUEST&#39;,
       401: &#39;UNAUTHORIZED&#39;,
       402: &#39;PAYMENT REQUIRED&#39;,
@@ -523,20 +595,18 @@ es没有事务
       428: &#39;PRECONDITION REQUIRED&#39;,
       429: &#39;TOO MANY REQUESTS&#39;,
       431: &#39;REQUEST HEADER FIELDS TOO LARGE&#39;,
-      500: &#39;INTERNAL SERVER ERROR&#39;,
+      499: &#39;client has closed connection&#39; (nginx自定义) (这很有可能是因为服务器端处理的时间过长,客户端“不耐烦”了),
 
+      500 ~ 599 服务器错误状态码
+      500: &#39;INTERNAL SERVER ERROR&#39;,
       # 客户端发起的请求超出服务器的能力范围(比如,使用了服务器不支持的请求方法)
       501: &#39;NOT IMPLEMENTED&#39;,
-
       # 网关错误,找不到后端服务
       502: &#39;BAD GATEWAY&#39;,
-
       # 一般是服务器有bug
       503: &#39;SERVICE UNAVAILABLE&#39;,
-
       # 服务器处理时间太长,超时
       504: &#39;GATEWAY TIMEOUT&#39;,
-
       505: &#39;HTTP VERSION NOT SUPPORTED&#39;,
       506: &#39;VARIANT ALSO NEGOTIATES&#39;,
       507: &#39;INSUFFICIENT STORAGE&#39;,
@@ -547,6 +617,31 @@ es没有事务
 &lt;/code&gt;&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;http-header-detail&quot;&gt;http header detail&lt;/h1&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;类型&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;通用头字段()&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;请求头字段()&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;响应头字段()&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;实体头字段()&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;请求字段&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zh.wikipedia.org/wiki/HTTP%E5%A4%B4%E5%AD%97%E6%AE%B5&quot;&gt;wiki&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
